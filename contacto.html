@@ -14,14 +14,16 @@
     </header>
     <main>
       <section>
-        <h3>Formulario de contacto</h3>
+        <br>
         <form action="https://formspree.io/f/mldryqlw" method="POST">
+          <fieldset>
+          <legend>Formulario de contacto</legend>
           <label for="nombre">Nombre:</label>
-          <input type="text" placeholder="Escriba su nombre" name="nombre" id="nombre" size="30" /> <br />
+          <input type="text" placeholder="Escriba su nombre" name="nombre" id="nombre" size="30" required/> <br />
           <label for="apellido">Apellido:</label>
-          <input type="text" placeholder="Escriba su apellido" name="apellido" id="apellido" size="30" /> <br />
+          <input type="text" placeholder="Escriba su apellido" name="apellido" id="apellido" size="30" required /> <br />
           <label for="Email">Email:</label>
-          <input type="email" placeholder="Escriba su email" name="email" id="email" size="30" /> <br />
+          <input type="email" placeholder="Escriba su email" name="email" id="email" size="30" required /> <br />
           <label for="telefono">Telefono:</label>
           <input type="text" placeholder="Escriba su telefono" name="telefono" id="telefono" size="30" /> <br />
           <label for="mensaje">
@@ -30,6 +32,7 @@
           </label> <br><br>
           <button type="submit">Enviar</button> 
           <button type="reset">Limpiar</button>
+          </fieldset>
         </form>
         <p></p>
       </section>
