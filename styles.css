@@ -4,6 +4,11 @@
     "Lucida Sans", Arial, sans-serif;
 }
 
+main {
+  margin: 0px;
+  padding: 20px;
+}
+
 .titulo {
   margin: 0px;
   padding: 20px;
