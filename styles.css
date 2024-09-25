@@ -81,5 +81,16 @@ footer a {
     color: white; /* Texto 白 */
 }
 
+form input, form textarea {
+    background-color: white; /* Fondo blanco para los campos */
+    width: 100%; 
+    max-width: 500px;
+    margin-bottom: 20px;
+    padding: 10px; /* Un poquito de espacio dentro del campo */
+    border: 1px solid #ccc; /* Borde suavecito */
+    border-radius: 5px; /* Unas esquinitas redondeadas */
+}
+
+
 
 
