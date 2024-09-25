@@ -8,40 +8,40 @@
     <link rel="stylesheet" href="styles.css" />
   <title>Contacto</title>
   <body>
-    <header>
-      <img src="/images/logo.png" alt="Logo" />
-      <p></p>
-      Por favor ingrese sus datos para contactarse con nosostros. <br />
-      En 3Mar queremos saber de usted.
-    </header>
+     <header></header>
+      <h1 class="titulo">Formulario de contacto</h1>
+      <nav>
+        <img id="logo" src="/images/logo.png" alt="Logo" width="200"/>
+        <a href="/index.html"><button>Home</button></a>
+      </nav>
+    </header>  
     <main>
-      <section>
-        <br>
-        <form action="https://formspree.io/f/mldryqlw" method="POST">
-          <fieldset>
-          <legend>Formulario de contacto</legend>
-          <label for="nombre">Nombre:</label>
-          <input type="text" placeholder="Escriba su nombre" name="nombre" id="nombre" size="30" required/> <br />
-          <label for="apellido">Apellido:</label>
-          <input type="text" placeholder="Escriba su apellido" name="apellido" id="apellido" size="30" required /> <br />
-          <label for="Email">Email:</label>
-          <input type="email" placeholder="Escriba su email" name="email" id="email" size="30" required /> <br />
-          <label for="telefono">Telefono:</label>
-          <input type="text" placeholder="Escriba su telefono" name="telefono" id="telefono" size="30" /> <br />
-          <label for="mensaje">
-            Su mensaje:
-            <textarea name="mensaje" placeholder="Escriba su mensaje" id="mensaje" cols="30" rows="5"></textarea>
-          </label> <br><br>
-          <button type="submit">Enviar</button> 
-          <button type="reset">Limpiar</button>
-          </fieldset>
-        </form>
+      <section class="contacto">
+        <h3>En 3Mar queremos saber de usted:</h3>
+          <form action="https://formspree.io/f/mldryqlw" method="POST">
+            <fieldset>
+            <legend>Formulario de contacto</legend>
+            <label for="nombre">Nombre:</label>
+            <input type="text" placeholder="Escriba su nombre" name="nombre" id="nombre" size="30" required/> <br />
+            <label for="apellido">Apellido:</label>
+            <input type="text" placeholder="Escriba su apellido" name="apellido" id="apellido" size="30" required /> <br />
+            <label for="Email">Email:</label>
+            <input type="email" placeholder="Escriba su email" name="email" id="email" size="30" required /> <br />
+            <label for="telefono">Telefono:</label>
+            <input type="text" placeholder="Escriba su telefono" name="telefono" id="telefono" size="30" /> <br />
+            <label for="mensaje">
+              Su mensaje:
+              <textarea name="mensaje" placeholder="Escriba su mensaje" id="mensaje" cols="30" rows="5"></textarea>
+            </label> <br><br>
+            <button type="submit">Enviar</button> 
+            <button type="reset">Limpiar</button>
+            </fieldset>
+          </form>
         <p></p>
       </section>
     </main>
     <footer>
-      <hr />
-      <a href="/index.html"><button>Home</button></a>
+        Todos los derechos reservados por 3Mar
     </footer>
   </body>
 </html>

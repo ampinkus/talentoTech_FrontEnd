@@ -1,5 +1,80 @@
-*{
-    margin: 5px;
-    background-color: antiquewhite;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+* {
+  background-color: antiquewhite;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
+
+.titulo {
+  margin: 0px;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  background-color: black;
+}
+
+.contacto {
+    width: 50%; /* Ocupa el 80% del ancho de la pantalla */
+    max-width: 100%; /* Asegura que no ocupe más del ancho de la pantalla */
+    margin: 0 auto; /* Centrar horizontalmente la sección */
+    box-sizing: border-box; /* Asegura que el padding no agregue ancho extra */
+}
+
+nav {
+  margin: 0px;
+  text-align: left;
+  padding: 20px;
+  background-color: bisque;
+}
+
+#logo {
+  margin: 10px;
+}
+
+nav button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: white; /* Ejemplo de color de fondo */
+    color: black;
+    border: 2px solid white; /* Borde de color blanco */
+    border-radius: 15px; /* Bordes redondeados */
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color:antiquewhite; /* Cambia el color al pasar el mouse */
+    border: 2px solid antiquewhite; /* Borde de color blanco */
+    border-radius: 15px; /* Bordes redondeados */
+}
+
+
+form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: white; /* Ejemplo de color de fondo */
+    color: black;
+    border: 2px solid white; /* Borde de color blanco */
+    border-radius: 15px; /* Bordes redondeados */
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color:bisque; /* Cambia el color al pasar el mouse */
+    border: 2px solid bisque; /* Borde de color blanco */
+    border-radius: 15px; /* Bordes redondeados */
+}
+
+
+footer {
+    margin: 0px;
+    background-color: black; /* Fondo negro */
+    color: white; /* Texto blanco */
+    text-align: center; /* Centrar el texto */
+    padding: 20px; /* Añadir un poco de espacio alrededor del texto */
+}
+
+footer a {
+    color: white; /* Texto 白 */
+}
+
+
+
