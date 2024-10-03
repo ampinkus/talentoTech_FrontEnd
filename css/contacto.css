@@ -1,0 +1,115 @@
+/* Ajustes generales de la página */
+* {
+  background-color: #f4f4f6;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+/* Estilos de la seccion principal */
+main {
+  margin: 0px;
+  padding: 20px;
+}
+
+/* Estilos del encabezado de las páginas*/
+.titulo {
+  margin: 0px;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  background-color: #66666e;
+}
+
+/* Estilos de la seccion de contacto */
+.contacto {
+  width: 50%; /* Ocupa el 80% del ancho de la pantalla */
+  max-width: 100%; /* Asegura que no ocupe más del ancho de la pantalla */
+  margin: 0 auto; /* Centrar horizontalmente la sección */
+  box-sizing: border-box; /* Asegura que el padding no agregue ancho extra */
+}
+
+/* Estilos de la barra de navegación */
+nav {
+  margin: 0px;
+  text-align: left;
+  padding: 20px;
+  background-color: #e6e6e9;
+}
+
+/* Estilos para el logo de la barra de navegación */
+#logo {
+  margin: 10px;
+}
+
+/* Estilos para los botones de la barra de navegación */
+nav button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 900;
+  background-color: white; /* Ejemplo de color de fondo */
+  color: black;
+  border: 2px solid white; /* Borde de color blanco */
+  border-radius: 15px; /* Bordes redondeados */
+  cursor: pointer;
+}
+
+/* Estilos para el hover de los botones de la barra de navegación */
+nav button:hover {
+  background-color: antiquewhite; /* Cambia el color al pasar el mouse */
+  border: 2px solid antiquewhite; /* Borde de color blanco */
+  border-radius: 15px; /* Bordes redondeados */
+}
+
+/* estilospara los botones del formulario de contacto */
+form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: white; /* Ejemplo de color de fondo */
+  color: black;
+  border: 2px solid white; /* Borde de color blanco */
+  border-radius: 15px; /* Bordes redondeados */
+  cursor: pointer;
+}
+
+/* Estilos para el hover de los botones del formulario de contacto */
+form button:hover {
+  background-color: bisque; /* Cambia el color al pasar el mouse */
+  border: 2px solid bisque; /* Borde de color blanco */
+  border-radius: 15px; /* Bordes redondeados */
+}
+
+/* Estilo para el footer */
+footer {
+  margin: 0px;
+  background-color: #66666e; /* Fondo negro */
+  font-size: 16px;
+  font-weight: 900;
+  color: white; /* Texto blanco */
+  text-align: center; /* Centrar el texto */
+  padding: 20px; /* Añadir un poco de espacio alrededor del texto */
+}
+
+/* Estilo para los campos de ingreso de texto del formulario */
+form input,
+form textarea {
+  background-color: white; /* Fondo blanco para los campos */
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 20px;
+  padding: 10px; /* Un poquito de espacio dentro del campo */
+  border: 1px solid #ccc; /* Borde suavecito */
+  border-radius: 5px; /* Unas esquinitas redondeadas */
+}
+
+/* Estilo para la imagen de la seccion clientes */
+.clientes img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+  height: auto; /* Mantiene las proporciones de la imagen */
+}
+
+/* estilo para la secccion de fotos de la pagina index */
+.equipos_instalados img {
+  margin: 20px; /* Agrega un margen de 20px alrededor de cada imagen */
+}
