@@ -113,3 +113,33 @@ form textarea {
 .equipos_instalados img {
   margin: 20px; /* Agrega un margen de 20px alrededor de cada imagen */
 }
+
+/* estilo para las imágenes de la seccion equipos instalados */
+.equipos_instalados img {
+    width: 30%; /* Ajusta el ancho de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin: 20px; /* Agrega un margen de 20px alrededor de cada imagen */
+    padding: 5px;
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4); /* Sombra suave */
+}
+
+
+/* Estilo para la seccion asentria */
+.asentria iframe {
+    width: 60%; /* Ajusta el ancho al 50% del contenedor */
+    height: auto; /* Ajusta la altura automáticamente */
+    aspect-ratio: 16 / 9; /* Mantiene una relación de aspecto de 16:9 */
+    padding: 5px;
+     margin: 20px; /* Agrega un margen de 20px alrededor de cada imagen */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4); /* Sombra suave */
+}
+
+/* estilo para las imágenes de la seccion clientes */
+.clientes img {
+    width: 65%; /* Usa porcentaje para adaptarse al ancho del contenedor */
+    /* O usa vw si deseas que la imagen sea relativa a la ventana del navegador */
+    /* width: 40vw; */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
