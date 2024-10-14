@@ -1,14 +1,14 @@
 /* Ajustes generales de la página */
 * {
   background-color: #f4f4f6;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: "Roboto";
+  /* font-family: 'Courier New', Courier, monospace; */
 }
 
 /* Estilos de la seccion principal */
 main {
   margin: 0px;
-  padding: 20px;
+  padding: 20px; 
 }
 
 /* Estilos del encabezado de las páginas*/
@@ -80,14 +80,15 @@ form button:hover {
 
 /* Estilo para el footer */
 footer {
-  margin: 0px;
+  height: 80px;
   background-color: #66666e; /* Fondo negro */
   font-size: 16px;
   font-weight: 900;
   color: white; /* Texto blanco */
-  text-align: center; /* Centrar el texto */
-  padding: 20px; /* Añadir un poco de espacio alrededor del texto */
+  text-align: center; /* Centrar el texto horizontalmente */
+  line-height: 80px; /* Igual a la altura del footer para centrar verticalmente */
 }
+
 
 /* Estilo para los campos de ingreso de texto del formulario */
 form input,
@@ -143,3 +144,5 @@ form textarea {
     /* width: 40vw; */
     height: auto; /* Mantiene la proporción de la imagen */
 }
+
+    
