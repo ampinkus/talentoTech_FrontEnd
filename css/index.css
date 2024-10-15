@@ -183,7 +183,7 @@ footer {
 .imagenes-column {
   display: flex;
   flex-direction: column; /* Organiza los elementos en una columna */
-  align-items: left; /* Centra las imágenes horizontalmente */
+  align-items: left; /* Ubica las imágenes a la izquierda */
   gap: 20px; /* Espacio entre las imágenes */
 }
 
