@@ -1,32 +1,59 @@
 /* Ajustes generales de la página */
 * {
-  background-color: #f4f4f6;
+  background-color: #dad7cd;
   font-family: "Roboto";
   /* font-family: 'Courier New', Courier, monospace; */
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
 /* Estilos de la seccion principal */
 main {
-  margin: 0px;
+  margin: 100px;
   padding: 20px; 
+  flex: 1;
+}
+
+/* Estilos de la barra de navegación del indice */
+.navegacionIndex {
+  background-color: #a3b18a;
+  display: flex; /* Activa Flexbox */
+  justify-content: space-around; /* Ajusta para alinear los elementos */
+  align-items: center; /* Centra los elementos verticalmente */
+  position: fixed; /* Fija la barra de navegación en la parte superior */
+  top: 0;
+  left: 0;
+  width: 100%; /* Asegura que ocupe todo el ancho */
+  /* padding: 20px; */
+  height: 100px;
+  background-color: #a3b18a;
 }
 
 
-/* Estilos de la barra de navegación */
+/* Estilos de la barra de navegación del resto de páginas*/
 .navegacion {
-  margin: 10px;
-  text-align: left;
-  background-color:gray;
-  position: sticky;
-  top: 0px;
+  background-color: #a3b18a;
+  display: flex; /* Activa Flexbox */
+  /* Ajusta para alinear los elementos */
+  /* justify-content: space-around;  */
+  align-items: center; /* Centra los elementos verticalmente */
+  position: fixed; /* Fija la barra de navegación en la parte superior */
+  top: 0;
+  left: 0;
+  width: 100%; /* Asegura que ocupe todo el ancho */
+  /* padding: 20px; */
+  height: 100px;
+  background-color: #a3b18a;
 }
 
-.navegacion .titulo {
+/* Estilos para el logo de la barra de navegación */
+#logo {
   margin: 10px;
-  text-align: center;
-  background-color:gray;
-  position: sticky;
-  top: 0px;
 }
 
 /* Estilos de la seccion de contacto */
@@ -37,14 +64,13 @@ main {
   box-sizing: border-box; /* Asegura que el padding no agregue ancho extra */
 }
 
-/* Estilos para el logo de la barra de navegación */
-#logo {
-  margin: 10px;
-}
-
 /* Estilos para los botones de la barra de navegación */
 nav button {
-  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px; /* Ancho fijo */
+  height: 60px; /* Alto fijo */
   font-size: 16px;
   font-weight: 900;
   background-color: white; /* Ejemplo de color de fondo */
@@ -52,12 +78,20 @@ nav button {
   border: 2px solid white; /* Borde de color blanco */
   border-radius: 15px; /* Bordes redondeados */
   cursor: pointer;
+  padding: 0; /* Elimina el padding para evitar desbordamientos */
 }
+
+/* Elimina el subrayado de los enlaces dentro de la barra de navegación */
+nav a {
+  text-decoration: none;
+}
+
+
 
 /* Estilos para el hover de los botones de la barra de navegación */
 nav button:hover {
-  background-color: antiquewhite; /* Cambia el color al pasar el mouse */
-  border: 2px solid antiquewhite; /* Borde de color blanco */
+  background-color: #dad7cd; /* Cambia el color al pasar el mouse */
+  border: 2px solid #dad7cd; /* Borde de color blanco */
   border-radius: 15px; /* Bordes redondeados */
 }
 
@@ -82,14 +116,12 @@ form button:hover {
 /* Estilo para el footer */
 footer {
   height: 80px;
-  background-color: #66666e; /* Fondo negro */
+   background-color: #344e41;
   font-size: 16px;
   font-weight: 900;
   color: white; /* Texto blanco */
   text-align: center; /* Centrar el texto horizontalmente */
   line-height: 80px; /* Igual a la altura del footer para centrar verticalmente */
-  position: sticky;
-  bottom: 0px;
 }
 
 
