@@ -11,13 +11,22 @@ main {
   padding: 20px; 
 }
 
-/* Estilos del encabezado de las páginas*/
-.titulo {
-  margin: 0px;
-  padding: 20px;
+
+/* Estilos de la barra de navegación */
+.navegacion {
+  margin: 10px;
+  text-align: left;
+  background-color:gray;
+  position: sticky;
+  top: 0px;
+}
+
+.navegacion .titulo {
+  margin: 10px;
   text-align: center;
-  color: white;
-  background-color: #66666e;
+  background-color:gray;
+  position: sticky;
+  top: 0px;
 }
 
 /* Estilos de la seccion de contacto */
@@ -26,14 +35,6 @@ main {
   max-width: 100%; /* Asegura que no ocupe más del ancho de la pantalla */
   margin: 0 auto; /* Centrar horizontalmente la sección */
   box-sizing: border-box; /* Asegura que el padding no agregue ancho extra */
-}
-
-/* Estilos de la barra de navegación */
-nav {
-  margin: 0px;
-  text-align: left;
-  padding: 20px;
-  background-color: #e6e6e9;
 }
 
 /* Estilos para el logo de la barra de navegación */
@@ -87,6 +88,8 @@ footer {
   color: white; /* Texto blanco */
   text-align: center; /* Centrar el texto horizontalmente */
   line-height: 80px; /* Igual a la altura del footer para centrar verticalmente */
+  position: sticky;
+  bottom: 0px;
 }
 
 
