@@ -20,7 +20,7 @@ main {
 }
 
 /* Estilos de la barra de navegación del indice */
-.navegacionIndex {
+.navegacion {
   background-color: #a3b18a;
   display: flex; /* Activa Flexbox */
   justify-content: space-around; /* Ajusta para alinear los elementos */
@@ -34,26 +34,9 @@ main {
   background-color: #a3b18a;
 }
 
-
-/* Estilos de la barra de navegación del resto de páginas*/
-.navegacion {
-  background-color: #a3b18a;
-  display: flex; /* Activa Flexbox */
-  /* Ajusta para alinear los elementos */
-  /* justify-content: space-around;  */
-  align-items: center; /* Centra los elementos verticalmente */
-  position: fixed; /* Fija la barra de navegación en la parte superior */
-  top: 0;
-  left: 0;
-  width: 100%; /* Asegura que ocupe todo el ancho */
-  /* padding: 20px; */
-  height: 100px;
-  background-color: #a3b18a;
-}
-
-/* Estilos para el logo de la barra de navegación */
+/* Estilos para el logo */
 #logo {
-  margin: 10px;
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4); /* Sombra suave */
 }
 
 /* Estilos de la seccion de contacto */
@@ -67,10 +50,10 @@ main {
 /* Estilos para los botones de la barra de navegación */
 nav button {
   display: flex;
-  justify-content: center;
+  justify-content:space-around ;
   align-items: center;
   width: 200px; /* Ancho fijo */
-  height: 60px; /* Alto fijo */
+  height: 50px; /* Alto fijo */
   font-size: 16px;
   font-weight: 900;
   background-color: white; /* Ejemplo de color de fondo */
@@ -79,14 +62,13 @@ nav button {
   border-radius: 15px; /* Bordes redondeados */
   cursor: pointer;
   padding: 0; /* Elimina el padding para evitar desbordamientos */
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4); /* Sombra suave */
 }
 
 /* Elimina el subrayado de los enlaces dentro de la barra de navegación */
 nav a {
   text-decoration: none;
 }
-
-
 
 /* Estilos para el hover de los botones de la barra de navegación */
 nav button:hover {
@@ -97,19 +79,22 @@ nav button:hover {
 
 /* estilospara los botones del formulario de contacto */
 form button {
+  margin: 10px;
   padding: 10px 20px;
   font-size: 16px;
+  font-weight: 900;
   background-color: white; /* Ejemplo de color de fondo */
   color: black;
   border: 2px solid white; /* Borde de color blanco */
   border-radius: 15px; /* Bordes redondeados */
   cursor: pointer;
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4); /* Sombra suave */
 }
 
 /* Estilos para el hover de los botones del formulario de contacto */
 form button:hover {
-  background-color: bisque; /* Cambia el color al pasar el mouse */
-  border: 2px solid bisque; /* Borde de color blanco */
+  background-color:gray; /* Cambia el color al pasar el mouse */
+  border: 2px solid gray; /* Borde de color blanco */
   border-radius: 15px; /* Bordes redondeados */
 }
 
@@ -126,16 +111,30 @@ footer {
 
 
 /* Estilo para los campos de ingreso de texto del formulario */
-form input,
-form textarea {
-  background-color: white; /* Fondo blanco para los campos */
-  width: 100%;
-  max-width: 500px;
-  margin-bottom: 20px;
-  padding: 10px; /* Un poquito de espacio dentro del campo */
-  border: 1px solid #ccc; /* Borde suavecito */
-  border-radius: 5px; /* Unas esquinitas redondeadas */
+.contacto form {
+  max-width: 600px;
+  margin: 0 auto;
 }
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.form-group label {
+  width: 100px; /* Ajusta el ancho de las etiquetas */
+  margin-right: 10px;
+  text-align: right; /* Alinea el texto de las etiquetas a la derecha */
+}
+.form-group input,
+.form-group textarea {
+  flex: 1; /* Permite que el campo de entrada ocupe el espacio restante */
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4);
+}
+
 
 /* Estilo para la imagen de la seccion clientes */
 .clientes img {
@@ -179,5 +178,22 @@ form textarea {
     /* width: 40vw; */
     height: auto; /* Mantiene la proporción de la imagen */
 }
+
+/* Estilo para las imagenes de la seccion equipos instalados */
+.imagenes-column {
+  display: flex;
+  flex-direction: column; /* Organiza los elementos en una columna */
+  align-items: left; /* Centra las imágenes horizontalmente */
+  gap: 20px; /* Espacio entre las imágenes */
+}
+
+.imagenes-column img {
+  width: 100%; /* Ajusta al tamaño del contenedor */
+  max-width: 300px; /* Limita el tamaño máximo de las imágenes */
+  height: auto; /* Mantiene la proporción de las imágenes */
+  border-radius: 10px; /* Opcional: Esquinas redondeadas */
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2); /* Opcional: Sombra suave */
+}
+
 
     
