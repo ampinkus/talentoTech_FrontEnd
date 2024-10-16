@@ -142,6 +142,7 @@ footer {
   margin: 0 auto;
   max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
   height: auto; /* Mantiene las proporciones de la imagen */
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4);
 }
 
 /* estilo para la secccion de fotos de la pagina index */
@@ -160,40 +161,45 @@ footer {
 }
 
 
-/* Estilo para la seccion asentria */
-.asentria iframe {
-    width: 60%; /* Ajusta el ancho al 50% del contenedor */
-    height: auto; /* Ajusta la altura automáticamente */
-    aspect-ratio: 16 / 9; /* Mantiene una relación de aspecto de 16:9 */
-    padding: 5px;
-     margin: 20px; /* Agrega un margen de 20px alrededor de cada imagen */
-    border-radius: 10px; /* Esquinas redondeadas */
-    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4); /* Sombra suave */
+/* Estilo para el título de la sección de servicios */
+.titulo-servicios {
+  text-align: left;
+  padding-left: 20px;
+  margin-bottom: 20px;
 }
 
-/* estilo para las imágenes de la seccion clientes */
-.clientes img {
-    width: 65%; /* Usa porcentaje para adaptarse al ancho del contenedor */
-    /* O usa vw si deseas que la imagen sea relativa a la ventana del navegador */
-    /* width: 40vw; */
-    height: auto; /* Mantiene la proporción de la imagen */
-}
-
-/* Estilo para las imagenes de la seccion equipos instalados */
-.imagenes-column {
+/* Flexbox para centrar horizontalmente y distribuir evenly */
+.flex-evenly {
   display: flex;
-  flex-direction: column; /* Organiza los elementos en una columna */
-  align-items: left; /* Ubica las imágenes a la izquierda */
-  gap: 20px; /* Espacio entre las imágenes */
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  height: auto;
+  padding: 0 20px;
 }
 
-.imagenes-column img {
-  width: 100%; /* Ajusta al tamaño del contenedor */
-  max-width: 300px; /* Limita el tamaño máximo de las imágenes */
-  height: auto; /* Mantiene la proporción de las imágenes */
-  border-radius: 10px; /* Opcional: Esquinas redondeadas */
-  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2); /* Opcional: Sombra suave */
+/* Estilo de cada caja */
+.p-container {
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  /* Organiza el contenido en columna dentro de la caja */
+  align-items: flex-start;
+  /* Alinea el texto a la izquierda */
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: left;
+  /* Alinea el texto a la izquierda */
 }
 
-
-    
+/* Estilo específico para el título dentro de cada caja */
+.titulo-caja {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  /* Espacio entre el título y el texto */
+}
