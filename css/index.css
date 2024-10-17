@@ -1,21 +1,21 @@
 /* Ajustes generales de la página */
 * {
-  background-color: #dad7cd;
   font-family: "Roboto";
-  /* font-family: 'Courier New', Courier, monospace; */
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   display: flex;
   flex-direction: column;
+  background-color: rgb(242, 247, 241);
 }
 
 /* Estilos de la seccion principal */
 main {
-  margin: 100px;
-  padding: 20px; 
+  margin: 50px;
+  padding: 50px;
   flex: 1;
 }
 
@@ -26,31 +26,25 @@ main {
   justify-content: space-around; /* Ajusta para alinear los elementos */
   align-items: center; /* Centra los elementos verticalmente */
   position: fixed; /* Fija la barra de navegación en la parte superior */
-  top: 0;
-  left: 0;
   width: 100%; /* Asegura que ocupe todo el ancho */
-  /* padding: 20px; */
   height: 100px;
-  background-color: #a3b18a;
+}
+
+/* Elimina el subrayado de los enlaces dentro de la barra de navegación */
+nav a {
+  text-decoration: none;
 }
 
 /* Estilos para el logo */
 #logo {
+  background-color: white;
   box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4); /* Sombra suave */
-}
-
-/* Estilos de la seccion de contacto */
-.contacto {
-  width: 50%; /* Ocupa el 80% del ancho de la pantalla */
-  max-width: 100%; /* Asegura que no ocupe más del ancho de la pantalla */
-  margin: 0 auto; /* Centrar horizontalmente la sección */
-  box-sizing: border-box; /* Asegura que el padding no agregue ancho extra */
 }
 
 /* Estilos para los botones de la barra de navegación */
 nav button {
   display: flex;
-  justify-content:space-around ;
+  justify-content: space-around;
   align-items: center;
   width: 200px; /* Ancho fijo */
   height: 50px; /* Alto fijo */
@@ -65,16 +59,42 @@ nav button {
   box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4); /* Sombra suave */
 }
 
-/* Elimina el subrayado de los enlaces dentro de la barra de navegación */
-nav a {
-  text-decoration: none;
-}
-
 /* Estilos para el hover de los botones de la barra de navegación */
 nav button:hover {
   background-color: #dad7cd; /* Cambia el color al pasar el mouse */
   border: 2px solid #dad7cd; /* Borde de color blanco */
   border-radius: 15px; /* Bordes redondeados */
+}
+
+/* Estilos para la seccion de imagenes de la página index*/
+.imagenes {
+  display: flex;
+  justify-content: flex-start; /* Alinea el contenido al inicio horizontalmente */
+  padding: 20px; /* Espacio alrededor del contenedor */
+}
+
+.imagenes-column {
+  display: flex;
+  flex-direction: column; /* Organiza las imágenes en una columna */
+  align-items: flex-start; /* Alinea las imágenes al lado izquierdo */
+  gap: 15px; /* Espacio entre las imágenes */
+}
+
+.imagenes-column img {
+  width: 150px; /* Ajusta el ancho de las imágenes */
+  height: auto; /* Mantiene la proporción de las imágenes */
+  border-radius: 10px; /* Esquinas redondeadas */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+
+
+/* Estilos de la seccion de contacto */
+.contacto {
+  width: 50%; /* Ocupa el 80% del ancho de la pantalla */
+  max-width: 100%; /* Asegura que no ocupe más del ancho de la pantalla */
+  margin: 0 auto; /* Centrar horizontalmente la sección */
+  box-sizing: border-box; /* Asegura que el padding no agregue ancho extra */
 }
 
 /* estilospara los botones del formulario de contacto */
@@ -93,22 +113,21 @@ form button {
 
 /* Estilos para el hover de los botones del formulario de contacto */
 form button:hover {
-  background-color:gray; /* Cambia el color al pasar el mouse */
-  border: 2px solid gray; /* Borde de color blanco */
+  background-color: #dad7cd; /* Cambia el color al pasar el mouse */
+  border: 2px solid #dad7cd; /* Borde de color blanco */
   border-radius: 15px; /* Bordes redondeados */
 }
 
 /* Estilo para el footer */
 footer {
   height: 80px;
-   background-color: #344e41;
+  background-color: #344e41;
   font-size: 16px;
   font-weight: 900;
   color: white; /* Texto blanco */
   text-align: center; /* Centrar el texto horizontalmente */
   line-height: 80px; /* Igual a la altura del footer para centrar verticalmente */
 }
-
 
 /* Estilo para los campos de ingreso de texto del formulario */
 .contacto form {
@@ -135,71 +154,53 @@ footer {
   box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4);
 }
 
-
 /* Estilo para la imagen de la seccion clientes */
-.clientes img {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
-  height: auto; /* Mantiene las proporciones de la imagen */
-  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4);
+.imagenes {
+  display: flex;
+  justify-content: flex-start; /* Alinea el contenido al inicio horizontalmente */
+  padding: 20px; /* Espacio alrededor del contenedor */
 }
 
-/* estilo para la secccion de fotos de la pagina index */
-.equipos_instalados img {
-  margin: 20px; /* Agrega un margen de 20px alrededor de cada imagen */
+.imagenes-column {
+  display: flex;
+  flex-direction: column; /* Organiza las imágenes en una columna */
+  align-items: flex-start; /* Alinea las imágenes al lado izquierdo */
+  gap: 50px; /* Espacio entre las imágenes */
 }
 
-/* estilo para las imágenes de la seccion equipos instalados */
-.equipos_instalados img {
-    width: 30%; /* Ajusta el ancho de la imagen */
-    height: auto; /* Mantiene la proporción de la imagen */
-    margin: 20px; /* Agrega un margen de 20px alrededor de cada imagen */
-    padding: 5px;
-    border-radius: 10px; /* Esquinas redondeadas */
-    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4); /* Sombra suave */
+.imagenes-column img {
+  width: 40%; /* Ajusta el ancho de las imágenes */
+  height: auto; /* Mantiene la proporción de las imágenes */
+  border-radius: 10px; /* Esquinas redondeadas */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.imagenes-column iframe {
+  width: 560px; 
+  height: 315px;  
+  border-radius: 10px; /* Esquinas redondeadas */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
 }
 
 
 /* Estilo para el título de la sección de servicios */
-.titulo-servicios {
-  text-align: left;
-  padding-left: 20px;
-  margin-bottom: 20px;
+.servicios_flex {
+  display: flex;
+  flex-direction: row; /* Organiza los elementos en una fila */
+  justify-content: space-around;
 }
 
-/* Flexbox para centrar horizontalmente y distribuir evenly */
-.flex-evenly {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: flex-start;
+.servicios_box {
   height: auto;
-  padding: 0 20px;
-}
-
-/* Estilo de cada caja */
-.p-container {
   width: 300px;
-  height: 300px;
-  background-color: white;
-  border: 2px solid black;
+  min-width: 150px;
+  border: 1px solid rgb(190, 214, 190);
+  background-color: rgb(223, 233, 223);
+  /* Margen alrededor de cada caja */
+  margin: 20px;
+  /* Padding alrededor de cada caja */
+  padding: 40px;
+  /* Esquinas redondeadas */
   border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  /* Organiza el contenido en columna dentro de la caja */
-  align-items: flex-start;
-  /* Alinea el texto a la izquierda */
-  padding: 20px;
-  box-sizing: border-box;
-  text-align: left;
-  /* Alinea el texto a la izquierda */
-}
-
-/* Estilo específico para el título dentro de cada caja */
-.titulo-caja {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  /* Espacio entre el título y el texto */
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4); /* Sombra suave */
 }
