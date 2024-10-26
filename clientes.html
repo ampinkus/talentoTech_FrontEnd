@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+ <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nuestros clientes</title>
-    <!-- <meta charset="UTF-8"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Normalize css   -->
+    
+    <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="/css/normalize.css" />
-    <!-- Style css   -->
-    <link rel="stylesheet" href="/css/index.css" />
-    <!-- Favicon -->
     <link rel="icon" href="/images/icons8-favicon-64.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>3Mar</title>
   </head>
-     <header>
-      <nav class="navegacion">
-        <img id="logo" src="/images/logo.png" alt="Logo" width="200" />
-        <a href="/"><button>Inicio</button></a>
-        <a href="/about.html"><button>Acerca de nosotros</button></a>
-        <a href="/contacto.html"><button>Formulario de contacto</button></a>
-        <a href="/servicios.html"><button>Nuestros servicios</button></a>
-      </nav>
-    </header>  
+     <navigation>
+      <div class="topnav" id="myTopnav">
+        <a href="/index.html"><img src="/images/logo.png" alt="Logo" width="150"></a>
+        <a href="/about.html">Nosotros</a>
+        <a href="/contacto.html">Contacto</a>
+        <a href="/clientes.html">Clientes</a>
+        <a href="/servicios.html">Servicios</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </navigation>
     <main>
       <section class="clientes">
         <h1>Algunos de nuestros clientes:</h1>
@@ -38,5 +40,7 @@
     <footer>
         Todos los derechos reservados por 3Mar
     </footer>
+
+    <script src="./script/script.js"></script>
   </body>
 </html>

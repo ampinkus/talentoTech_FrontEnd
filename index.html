@@ -2,75 +2,56 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3Mar</title>
-    <!-- <meta charset="UTF-8"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Normalize css   -->
+    
+    <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="/css/normalize.css" />
-    <!-- Style css   -->
-    <link rel="stylesheet" href="/css/index.css" />
-    <title>Alfredo 3Mar</title>
-    <!-- Favicon -->
     <link rel="icon" href="/images/icons8-favicon-64.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <title>3Mar</title>
   </head>
-
   <body>
-    <header>
-      <nav class="navegacion">
-        <img id="logo" src="/images/logo.png" alt="Logo" width="200" />
-        <a href="/about.html"><button>Acerca de nosotros</button></a>
-        <a href="/contacto.html"><button>Formulario de contacto</button></a>
-        <a href="/clientes.html"><button>Nuestros clientes</button></a>
-        <a href="/servicios.html"><button>Nuestros servicios</button></a>
-      </nav>
-    </header>
+    <navigation>
+      <div class="topnav" id="myTopnav">
+        <a href="/index.html"><img src="/images/logo.png" alt="Logo" width="150"></a>
+        <a href="/about.html">Nosotros</a>
+        <a href="/contacto.html">Contacto</a>
+        <a href="/clientes.html">Clientes</a>
+        <a href="/servicios.html">Servicios</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </navigation>
 
     <main>
-      <section class="equipos_instalados">
-        <h1>
-          Instalacion, mantenimiento y soporte de sistemas de Back Up para su
-          empresa
-        </h1>
-        <h3>Algunos de los equipos que hemos instalado:</h3>
-        <section class="imagenes">
-          <div class="imagenes-column">
-            <img
-              src="/images/it-engineer-or-consultant-working-with-backup-server-in-racks-shot-EH6D0W.jpg"
-              alt="Sistema de Backup"
-            />
-            <img
-              src="/images/IBM-Tape-library-image-696x466.jpg"
-              alt="IBM tape library"
-            />
-            <img src="/images/ibm4500.jpg" alt="TS4500" />
-            <img
-              src="/images/i6-base-standalone_1024x1024.png"
-              alt="Standalone"
-            />
-            <img src="/images/s-l1600.png" alt="l1600" />
-            <img src="/images/TS4300.png" alt="TS 4300" />
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/2_Ob0IhKeF8?si=Ho-KPHzkDiQ2rQxy"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-          </div>
+        <section class="equipos_instalados">
+            <h1>Instalación, mantenimiento y soporte de sistemas de Back Up para su empresa</h1>
+            <h3>Algunos de los equipos que hemos instalado:</h3>
+            <section class="imagenes">
+                <div class="imagenes-column">
+                    <img src="/images/it-engineer-or-consultant-working-with-backup-server-in-racks-shot-EH6D0W.jpg" alt="Sistema de Backup">
+                    <img src="/images/IBM-Tape-library-image-696x466.jpg" alt="IBM tape library">
+                    <img src="/images/ibm4500.jpg" alt="TS4500">
+                    <img src="/images/i6-base-standalone_1024x1024.png" alt="Standalone">
+                    <img src="/images/s-l1600.png" alt="l1600">
+                    <img src="/images/TS4300.png" alt="TS 4300">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/2_Ob0IhKeF8?si=Ho-KPHzkDiQ2rQxy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </section>
         </section>
-      </section>
     </main>
+
     <footer>Todos los derechos reservados por 3Mar</footer>
+
+    <script src="./script/script.js"></script>
   </body>
 </html>

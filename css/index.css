@@ -19,103 +19,133 @@ main {
   flex: 1;
 }
 
-/* Estilos de la barra de navegación del indice */
+/* Estilos de la barra de navegación */
 .navegacion {
   background-color: #a3b18a;
-  display: flex; /* Activa Flexbox */
-  justify-content: space-around; /* Ajusta para alinear los elementos */
-  align-items: center; /* Centra los elementos verticalmente */
-  position: fixed; /* Fija la barra de navegación en la parte superior */
-  width: 100%; /* Asegura que ocupe todo el ancho */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
   height: 100px;
+  z-index: 1;
 }
 
-/* Elimina el subrayado de los enlaces dentro de la barra de navegación */
-nav a {
+.navegacion a {
   text-decoration: none;
+  color: black;
+  font-weight: 700;
+  padding: 15px 20px;
+  border-radius: 5px;
+}
+
+/* Botón hamburguesa en móviles */
+.navegacion .icon {
+  display: none; /* Se mostrará en el media query */
 }
 
 /* Estilos para el logo */
 #logo {
   background-color: white;
-  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4); /* Sombra suave */
+  border-radius: 10px;
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4);
 }
 
 /* Estilos para los botones de la barra de navegación */
-nav button {
+.navegacion a, .navegacion button {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  width: 200px; /* Ancho fijo */
-  height: 50px; /* Alto fijo */
+  width: 200px;
+  height: 50px;
   font-size: 16px;
   font-weight: 900;
-  background-color: white; /* Ejemplo de color de fondo */
+  background-color: white;
   color: black;
-  border: 2px solid white; /* Borde de color blanco */
-  border-radius: 15px; /* Bordes redondeados */
+  border: 2px solid white;
+  border-radius: 15px;
   cursor: pointer;
-  padding: 0; /* Elimina el padding para evitar desbordamientos */
-  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4); /* Sombra suave */
+  padding: 0;
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4);
 }
 
-/* Estilos para el hover de los botones de la barra de navegación */
-nav button:hover {
-  background-color: #dad7cd; /* Cambia el color al pasar el mouse */
-  border: 2px solid #dad7cd; /* Borde de color blanco */
-  border-radius: 15px; /* Bordes redondeados */
+.navegacion a:hover, .navegacion button:hover {
+  background-color: #dad7cd;
+  border: 2px solid #dad7cd;
+  border-radius: 15px;
 }
 
-/* Estilos para la seccion de imagenes de la página index*/
+/* Media Query para hacer la barra de navegación responsiva */
+@media screen and (max-width: 600px) {
+  .navegacion a:not(:first-child) {
+    display: none;
+  }
+
+  .navegacion .icon {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .navegacion.responsive {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .navegacion.responsive a {
+    display: block;
+    text-align: left;
+    padding: 15px 20px;
+    width: 100%;
+  }
+
+  .navegacion.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+/* Estilos para la sección de imágenes */
 .imagenes {
   display: flex;
-  justify-content: flex-start; /* Alinea el contenido al inicio horizontalmente */
-  padding: 20px; /* Espacio alrededor del contenedor */
+  justify-content: flex-start;
+  padding: 20px;
 }
 
 .imagenes-column {
   display: flex;
-  flex-direction: column; /* Organiza las imágenes en una columna */
-  align-items: flex-start; /* Alinea las imágenes al lado izquierdo */
-  gap: 15px; /* Espacio entre las imágenes */
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
 }
 
 .imagenes-column img {
-  width: 150px; /* Ajusta el ancho de las imágenes */
-  height: auto; /* Mantiene la proporción de las imágenes */
-  border-radius: 10px; /* Esquinas redondeadas */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
-
-/* Estilos de la seccion de contacto */
-.contacto {
-  width: 50%; /* Ocupa el 80% del ancho de la pantalla */
-  max-width: 100%; /* Asegura que no ocupe más del ancho de la pantalla */
-  margin: 0 auto; /* Centrar horizontalmente la sección */
-  box-sizing: border-box; /* Asegura que el padding no agregue ancho extra */
-}
-
-/* estilospara los botones del formulario de contacto */
+/* Estilos para botones del formulario de contacto */
 form button {
   margin: 10px;
   padding: 10px 20px;
   font-size: 16px;
   font-weight: 900;
-  background-color: white; /* Ejemplo de color de fondo */
+  background-color: white;
   color: black;
-  border: 2px solid white; /* Borde de color blanco */
-  border-radius: 15px; /* Bordes redondeados */
+  border: 2px solid white;
+  border-radius: 15px;
   cursor: pointer;
-  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4); /* Sombra suave */
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4);
 }
 
-/* Estilos para el hover de los botones del formulario de contacto */
 form button:hover {
-  background-color: #dad7cd; /* Cambia el color al pasar el mouse */
-  border: 2px solid #dad7cd; /* Borde de color blanco */
-  border-radius: 15px; /* Bordes redondeados */
+  background-color: #dad7cd;
+  border: 2px solid #dad7cd;
+  border-radius: 15px;
 }
 
 /* Estilo para el footer */
@@ -124,83 +154,35 @@ footer {
   background-color: #344e41;
   font-size: 16px;
   font-weight: 900;
-  color: white; /* Texto blanco */
-  text-align: center; /* Centrar el texto horizontalmente */
-  line-height: 80px; /* Igual a la altura del footer para centrar verticalmente */
+  color: white;
+  text-align: center;
+  line-height: 80px;
 }
 
-/* Estilo para los campos de ingreso de texto del formulario */
+/* Estilos específicos para formularios */
 .contacto form {
   max-width: 600px;
   margin: 0 auto;
 }
+
 .form-group {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
+
 .form-group label {
-  width: 100px; /* Ajusta el ancho de las etiquetas */
+  width: 100px;
   margin-right: 10px;
-  text-align: right; /* Alinea el texto de las etiquetas a la derecha */
+  text-align: right;
 }
+
 .form-group input,
 .form-group textarea {
-  flex: 1; /* Permite que el campo de entrada ocupe el espacio restante */
+  flex: 1;
   background-color: white;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4);
-}
-
-/* Estilo para la imagen de la seccion clientes */
-.imagenes {
-  display: flex;
-  justify-content: flex-start; /* Alinea el contenido al inicio horizontalmente */
-  padding: 20px; /* Espacio alrededor del contenedor */
-}
-
-.imagenes-column {
-  display: flex;
-  flex-direction: column; /* Organiza las imágenes en una columna */
-  align-items: flex-start; /* Alinea las imágenes al lado izquierdo */
-  gap: 50px; /* Espacio entre las imágenes */
-}
-
-.imagenes-column img {
-  width: 40%; /* Ajusta el ancho de las imágenes */
-  height: auto; /* Mantiene la proporción de las imágenes */
-  border-radius: 10px; /* Esquinas redondeadas */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
-}
-
-.imagenes-column iframe {
-  width: 560px; 
-  height: 315px;  
-  border-radius: 10px; /* Esquinas redondeadas */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
-}
-
-
-/* Estilo para el título de la sección de servicios */
-.servicios_flex {
-  display: flex;
-  flex-direction: row; /* Organiza los elementos en una fila */
-  justify-content: space-around;
-}
-
-.servicios_box {
-  height: auto;
-  width: 300px;
-  min-width: 150px;
-  border: 1px solid rgb(190, 214, 190);
-  background-color: rgb(223, 233, 223);
-  /* Margen alrededor de cada caja */
-  margin: 20px;
-  /* Padding alrededor de cada caja */
-  padding: 40px;
-  /* Esquinas redondeadas */
-  border-radius: 10px;
-  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4); /* Sombra suave */
 }
