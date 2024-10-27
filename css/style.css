@@ -78,36 +78,66 @@ main {
 /* Estilos para la sección de imágenes */ 
 .imagenes {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Dos columnas: una para imagen/video y otra para texto */
-  gap: 20px;
+  grid-template-columns: 1fr; /* Una columna que contendrá los imagen-item */
+  gap: 30px;
   padding: 20px;
 }
 
 .imagen-item {
-  display: contents;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* División en dos columnas iguales: imagen y texto */
+  gap: 20px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  min-height: 200px; /* Altura mínima para asegurar que no queden muy pequeños */
 }
 
 .imagen-item img,
 .imagen-item iframe {
   width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  height: auto; /* Permite que la altura se ajuste según la proporción original */
+  max-height: 100%; /* Evita que la imagen sea más alta que su contenedor */
+  object-fit: contain; /* Mantiene la proporción original de la imagen */
+  border-radius: 10px 0 0 10px; /* Redondea solo las esquinas izquierdas */
 }
 
-/* Consolidar estilos en .imagen-texto */
 .imagen-texto {
   display: flex;
   align-items: center;
   padding: 20px;
-  font-size: 1.2rem; /* Tamaño ajustado según tu solicitud */
+  font-size: 1.2rem;
   color: #333;
   background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  height: 100%; /* Asegura que el texto ocupe toda la altura disponible */
 }
 
+/* Ajuste especial para el iframe de YouTube */
+.imagen-item iframe {
+  aspect-ratio: 16/9; /* Mantiene la proporción estándar de video */
+  height: 100%; /* Ocupa toda la altura disponible */
+  object-fit: cover;
+}
 
+/* Asegura responsividad en pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .imagen-item {
+    grid-template-columns: 1fr; /* Cambia a una columna en pantallas pequeñas */
+  }
+
+  .imagen-item img,
+  .imagen-item iframe {
+    width: 100%;
+    border-radius: 10px 10px 0 0; /* Redondea las esquinas superiores */
+  }
+
+  .imagen-texto {
+    padding: 15px;
+    font-size: 1.1rem;
+  }
+}
 
 /* Estilos para botones del formulario de contacto */
 form button {
