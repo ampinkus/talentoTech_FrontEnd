@@ -9,9 +9,11 @@ body {
 }
 
 /* Estilos de la seccion principal */
+/* Configuración de main para ocupar el espacio disponible */
 main {
-  margin: 10px;
-  padding: 10px;
+  margin: 10px ;
+  padding: 10px ;
+  min-height: calc(100vh - 170px); /* Altura total menos la altura aproximada de la navbar y el footer */
 }
 
 .topnav {
@@ -32,13 +34,13 @@ main {
   margin: 20px 0px 0px 10px;
 }
 
-.topnav a:hover:not(:has(img )) {
+.topnav a:hover:not(:has(img)) {
   /* Aplica el hover solo a los enlaces de texto (no al logo) */
   color: black;
   font-style: italic;
 }
 
-.icon{
+.icon {
   margin: 20px !important;
 }
 
@@ -48,7 +50,9 @@ main {
 }
 
 @media screen and (max-width: 815px) {
-  .topnav a:not(:first-child) {display: none;}
+  .topnav a:not(:first-child) {
+    display: none;
+  }
   .topnav a.icon {
     float: right;
     display: block;
@@ -56,7 +60,9 @@ main {
 }
 
 @media screen and (max-width: 815px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+  }
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
@@ -69,27 +75,39 @@ main {
   }
 }
 
-
-* Estilos para la sección de imágenes */
+/* Estilos para la sección de imágenes */ 
 .imagenes {
-  display: flex;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas: una para imagen/video y otra para texto */
+  gap: 20px;
   padding: 20px;
 }
 
-.imagenes-column {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 15px;
+.imagen-item {
+  display: contents;
 }
 
-.imagenes-column img {
-  width: 150px;
+.imagen-item img,
+.imagen-item iframe {
+  width: 100%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+/* Consolidar estilos en .imagen-texto */
+.imagen-texto {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  font-size: 1.2rem; /* Tamaño ajustado según tu solicitud */
+  color: #333;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
 
 /* Estilos para botones del formulario de contacto */
 form button {
@@ -120,8 +138,8 @@ footer {
   color: white;
   text-align: center;
   line-height: 80px;
+  margin-top: auto;
 }
-
 
 /* Estilos específicos para formularios */
 .contacto form {
@@ -149,4 +167,12 @@ footer {
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Estilos para la sección de clientes */
+.clientes img {
+  max-width: 100%; /* La imagen ocupará el ancho máximo disponible */
+  height: auto; /* Mantiene la proporción de la imagen en ambos ejes */
+  display: block; /* Elimina el espacio inferior que dejan algunas imágenes */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
 }
