@@ -206,3 +206,35 @@ footer {
   display: block; /* Elimina el espacio inferior que dejan algunas imágenes */
   margin: 0 auto; /* Centra la imagen horizontalmente */
 }
+
+/* Contenedor principal de las tarjetas, organiza las tarjetas en una fila */
+.servicios_flex {
+  display: flex; /* Coloca las tarjetas en fila */
+  flex-wrap: wrap; /* Permite que las tarjetas salten a una nueva línea si no caben en una */
+  gap: 20px; /* Espacio entre las tarjetas */
+  justify-content: center; /* Centra las tarjetas horizontalmente */
+  padding: 20px;
+}
+
+/* Estilo de cada tarjeta individual */
+.servicios_box {
+  background-color: #f9f9f9; /* Fondo claro para la tarjeta */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  padding: 20px; /* Espacio interno de la tarjeta */
+  width: 300px; /* Ancho fijo para cada tarjeta */
+  max-width: 100%; /* Asegura que las tarjetas no se desborden */
+  text-align: center; /* Centra el texto */
+}
+
+/* Título dentro de cada tarjeta */
+.servicios_box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Párrafo dentro de cada tarjeta */
+.servicios_box p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
