@@ -1,0 +1,9 @@
+{
+  "rules": {
+    "indentation": 2,
+    "number-leading-zero": "always",
+    "string-quotes": "double",
+    "block-no-empty": true,
+    "color-no-invalid-hex": true
+  }
+}
