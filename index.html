@@ -1,117 +1,116 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8" />
-
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="/css/normalize.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
     <link rel="icon" href="/images/icons8-favicon-64.png" type="image/png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
     <title>3Mar</title>
-  </head>
-  <body>
-    <navigation>
-      <div class="topnav" id="myTopnav">
-        <a href="/index.html"
-          ><img src="/images/logo.png" alt="Logo" width="150"
-        /></a>
-        <a href="/about.html">Nosotros</a>
-        <a href="/contacto.html">Contacto</a>
-        <a href="/clientes.html">Clientes</a>
-        <a href="/servicios.html">Servicios</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
-      </div>
-    </navigation>
+</head>
+<body>
+    <!-- Menú de navegación estándar de Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/index.html">
+                <img src="/images/logo.png" alt="Logo" width="150" />
+            </a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="/about.html">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/clientes.html">Clientes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/servicios.html">Servicios</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <main>
-      <section class="equipos_instalados">
-        <h1>
-          Instalación, mantenimiento y soporte de sistemas de Back Up para su
-          empresa
-        </h1>
-        <h3>Algunos de los equipos que hemos instalado:</h3>
-        <section class="imagenes">
-          <div class="imagen-item">
-            <img
-              src="/images/it-engineer-or-consultant-working-with-backup-server-in-racks-shot-EH6D0W.jpg"
-              alt="Sistema de Backup"
-            />
-            <p class="imagen-texto">
-              Sistema de Backup instalado en una empresa cliente
-            </p>
-          </div>
-          <div class="imagen-item">
-            <img
-              src="/images/IBM-Tape-library-image-696x466.jpg"
-              alt="IBM tape library"
-            />
-            <p class="imagen-texto">
-              IBM Tape Library en acción para respaldos de datos a gran escala
-            </p>
-          </div>
-          <div class="imagen-item">
-            <img src="/images/ibm4500.jpg" alt="TS4500" />
-            <p class="imagen-texto">
-              Modelo TS4500, una solución confiable para almacenamiento seguro
-            </p>
-          </div>
-          <div class="imagen-item">
-            <img
-              src="/images/i6-base-standalone_1024x1024.png"
-              alt="Standalone"
-            />
-            <p class="imagen-texto">
-              Unidad Standalone para backup independiente
-            </p>
-          </div>
-          <div class="imagen-item">
-            <img src="/images/s-l1600.png" alt="l1600" />
-            <p class="imagen-texto">
-              Modelo L1600, altamente eficiente para backups continuos
-            </p>
-          </div>
-          <div class="imagen-item">
-            <img src="/images/TS4300.png" alt="TS 4300" />
-            <p class="imagen-texto">
-              TS4300, un equipo versátil para backups en empresas de todos los
-              tamaños
-            </p>
-          </div>
-
-          <!-- Video de YouTube y su texto explicativo -->
-          <div class="imagen-item">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/2_Ob0IhKeF8?si=Ho-KPHzkDiQ2rQxy"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-            <p class="imagen-texto">
-              Video explicativo sobre el uso y configuración de nuestras
-              soluciones de control de sistemas de telecommunicaciones.
-            </p>
-          </div>
+    <main class="container mt-4">
+        <section class="equipos_instalados">
+            <h1 class="mb-4">
+                Instalación, mantenimiento y soporte de sistemas de Back Up para su empresa
+            </h1>
+            <h3>Algunos de los equipos que hemos instalado:</h3>
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <!-- Primera imagen con texto -->
+                    <div class="card mb-3">
+                        <img src="/images/it-engineer-or-consultant-working-with-backup-server-in-racks-shot-EH6D0W.jpg" class="card-img-top" alt="Sistema de Backup">
+                        <div class="card-body">
+                            <p class="card-text">Sistema de Backup instalado en una empresa cliente</p>
+                        </div>
+                    </div>
+                    <!-- Segunda imagen con texto -->
+                    <div class="card mb-3">
+                        <img src="/images/IBM-Tape-library-image-696x466.jpg" class="card-img-top" alt="IBM tape library">
+                        <div class="card-body">
+                            <p class="card-text">IBM Tape Library en acción para respaldos de datos a gran escala</p>
+                        </div>
+                    </div>
+                    <!-- Tercera imagen con texto -->
+                    <div class="card mb-3">
+                        <img src="/images/ibm4500.jpg" class="card-img-top" alt="TS4500">
+                        <div class="card-body">
+                            <p class="card-text">Modelo TS4500, una solución confiable para almacenamiento seguro</p>
+                        </div>
+                    </div>
+                    <!-- Cuarta imagen con texto -->
+                    <div class="card mb-3">
+                        <img src="/images/i6-base-standalone_1024x1024.png" class="card-img-top" alt="Standalone">
+                        <div class="card-body">
+                            <p class="card-text">Unidad Standalone para backup independiente</p>
+                        </div>
+                    </div>
+                    <!-- Quinta imagen con texto -->
+                    <div class="card mb-3">
+                        <img src="/images/s-l1600.png" class="card-img-top" alt="l1600">
+                        <div class="card-body">
+                            <p class="card-text">Modelo L1600, altamente eficiente para backups continuos</p>
+                        </div>
+                    </div>
+                    <!-- Sexta imagen con texto -->
+                    <div class="card mb-3">
+                        <img src="/images/TS4300.png" class="card-img-top" alt="TS 4300">
+                        <div class="card-body">
+                            <p class="card-text">TS4300, un equipo versátil para backups en empresas de todos los tamaños</p>
+                        </div>
+                    </div>
+                    <!-- Video explicativo -->
+                    <div class="card mt-4">
+                        <iframe
+                            class="card-img-top"
+                            width="100%"
+                            height="315"
+                            src="https://www.youtube.com/embed/2_Ob0IhKeF8"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                        ></iframe>
+                        <div class="card-body">
+                            <p class="card-text">Video explicativo sobre el uso y configuración de nuestras soluciones de control de sistemas de telecomunicaciones.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-      </section>
     </main>
 
-    <footer>Todos los derechos reservados por 3Mar</footer>
+    <footer class="text-center py-3 bg-secondary mt-4">
+        Todos los derechos reservados por 3Mar
+    </footer>
 
-    <script src="./script/script.js"></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

@@ -1,72 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="/css/normalize.css" />
-    <link rel="icon" href="/images/icons8-favicon-64.png" type="image/png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <title>3Mar</title>
-  </head>
-  <body class="body">
-     <navigation>
-      <div class="topnav" id="myTopnav">
-        <a href="/index.html"><img src="/images/logo.png" alt="Logo" width="150"></a>
-        <a href="/about.html">Nosotros</a>
-        <a href="/contacto.html">Contacto</a>
-        <a href="/clientes.html">Clientes</a>
-        <a href="/servicios.html">Servicios</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
-      </div>
-    </navigation>
-
-    <main>
-      <article>
-        <h1>Qué servicios brindamos:</h1>
-        <div class="servicios_flex">
-          <div class="servicios_box">
-            <h3>Servicio Técnico de Tape Drives y Librerías:</h3>
-            <p>
-              ¿Tiene una Unidad de Cinta Magnética o Tape Drive y no está
-              funcionando como corresponde?<br />
-              No es necesario que analices comprar una nueva versión o el último
-              modelo que ofrece el mercado...
-            </p>
-          </div>
-
-          <div class="servicios_box">
-            <h3>¿Cómo funciona una Unidad de Cinta (Tape Drive)?</h3>
-            <p>
-              Para poder leer y/o escribir sobre una cinta magnética, primero
-              debemos introducirla en su Unidad de Cinta...
-            </p>
-          </div>
-
-          <div class="servicios_box">
-            <h3>¿Qué componentes se pueden dañar en una Unidad de Cinta?</h3>
-            <p>
-              Estos equipos cuentan tanto con una parte lógica como con una
-              mecánica...
-            </p>
-          </div>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="icon" href="/images/icons8-favicon-64.png" type="image/png">
+    <title>Servicios - 3Mar</title>
+    <style>
+        .card {
+            min-height: 250px; /* Define una altura mínima para uniformar el tamaño */
+        }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/index.html">
+                <img src="/images/logo.png" alt="Logo" width="150">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="/about.html">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/clientes.html">Clientes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/servicios.html">Servicios</a></li>
+                </ul>
+            </div>
         </div>
-      </article>
-    
+    </nav>
+
+    <main class="container mt-4 flex-grow-1">
+        <h1 class="text-center mb-4">Qué servicios brindamos:</h1>
+        <div class="row g-4">
+            <!-- Servicio 1 -->
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Servicio Técnico de Tape Drives y Librerías:</h5>
+                        <p class="card-text">
+                            ¿Tiene una Unidad de Cinta Magnética o Tape Drive y no está funcionando como corresponde?
+                            No es necesario que analices comprar una nueva versión o el último modelo que ofrece el mercado...
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Servicio 2 -->
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">¿Cómo funciona una Unidad de Cinta (Tape Drive)?</h5>
+                        <p class="card-text">
+                            Para poder leer y/o escribir sobre una cinta magnética, primero debemos introducirla en su Unidad de Cinta...
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Servicio 3 -->
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">¿Qué componentes se pueden dañar en una Unidad de Cinta?</h5>
+                        <p class="card-text">
+                            Estos equipos cuentan tanto con una parte lógica como con una mecánica...
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <footer>Todos los derechos reservados por 3Mar</footer>
-     <script src="./script/script.js"></script>
-  </body>
+    <footer class="text-center py-3 bg-secondary fixed-bottom">
+        Todos los derechos reservados por 3Mar
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
