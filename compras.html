@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" href="/images/icons8-favicon-64.png" type="image/png" />
+    <title>Compras - 3Mar</title>
+  </head>
+  <body>
+    <!-- Menú de navegación estándar de Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/index.html">
+          <img src="/images/logo.png" alt="Logo" width="150" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/about.html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/clientes.html">Clientes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/servicios.html">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/compras.html">Compras</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/carrito.html">
+                <i class="bi bi-cart"></i> Carrito
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="container mt-4">
+      <h1 class="text-center mb-4">Compra de Cartuchos de Cinta LTO</h1>
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <!-- Tarjeta 1: LTO-9 -->
+        <div class="col">
+          <div class="card h-100">
+            <div class="image-frame">
+              <img src="/images/LTO 9.jpg" alt="LTO-9" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">LTO-9</h5>
+              <div class="quantity-section">
+                <input
+                  type="number"
+                  id="LTO-9"
+                  class="form-control"
+                  min="0"
+                  placeholder="Cantidad"
+                />
+                <button
+                  class="btn btn-primary"
+                  onclick="actualizarCantidad('LTO-9')"
+                >
+                  Actualizar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 2: LTO-8 -->
+        <div class="col">
+          <div class="card h-100">
+            <div class="image-frame">
+              <img src="/images/LTO 8.jpg" alt="LTO-8" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">LTO-8</h5>
+              <div class="quantity-section">
+                <input
+                  type="number"
+                  id="LTO-8"
+                  class="form-control"
+                  min="0"
+                  placeholder="Cantidad"
+                />
+                <button
+                  class="btn btn-primary"
+                  onclick="actualizarCantidad('LTO-8')"
+                >
+                  Actualizar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 3: LTO-7 -->
+        <div class="col">
+          <div class="card h-100">
+            <div class="image-frame">
+              <img src="/images/LTO 7.jpg" alt="LTO-7" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">LTO-7</h5>
+              <div class="quantity-section">
+                <input
+                  type="number"
+                  id="LTO-7"
+                  class="form-control"
+                  min="0"
+                  placeholder="Cantidad"
+                />
+                <button
+                  class="btn btn-primary"
+                  onclick="actualizarCantidad('LTO-7')"
+                >
+                  Actualizar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 4: LTO-6 -->
+        <div class="col">
+          <div class="card h-100">
+            <div class="image-frame">
+              <img src="/images/LTO 6.jpg" alt="LTO-6" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">LTO-6</h5>
+              <div class="quantity-section">
+                <input
+                  type="number"
+                  id="LTO-6"
+                  class="form-control"
+                  min="0"
+                  placeholder="Cantidad"
+                />
+                <button
+                  class="btn btn-primary"
+                  onclick="actualizarCantidad('LTO-6')"
+                >
+                  Actualizar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 5: LTO-5 -->
+        <div class="col">
+          <div class="card h-100">
+            <div class="image-frame">
+              <img src="/images/LTO 5.jpg" alt="LTO-5" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">LTO-5</h5>
+              <div class="quantity-section">
+                <input
+                  type="number"
+                  id="LTO 5"
+                  class="form-control"
+                  min="0"
+                  placeholder="Cantidad"
+                />
+                <button
+                  class="btn btn-primary"
+                  onclick="actualizarCantidad('LTO-5')"
+                >
+                  Actualizar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 6: Cartucho de Limpieza -->
+        <div class="col">
+          <div class="card h-100">
+            <div class="image-frame">
+              <img
+                src="/images/cartucho limpieza.jpg"
+                alt="Cartucho de Limpieza"
+              />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Cartucho de Limpieza</h5>
+              <div class="quantity-section">
+                <input
+                  type="number"
+                  id="Cartucho de Limpieza"
+                  class="form-control"
+                  min="0"
+                  placeholder="Cantidad"
+                />
+                <button
+                  class="btn btn-primary"
+                  onclick="actualizarCantidad('Cartucho de Limpieza')"
+                >
+                  Actualizar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="text-center py-3 bg-secondary mt-4">
+      Todos los derechos reservados por 3Mar
+    </footer>
+
+    <script src="./script/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
