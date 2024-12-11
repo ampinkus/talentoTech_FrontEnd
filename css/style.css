@@ -17,6 +17,7 @@
 
 .card {
     height: auto; /* Altura ajustable automáticamente */
+    cursor: pointer; /* Cambia el cursor a mano al pasar el mouse */
 }
 
 .card-body {
