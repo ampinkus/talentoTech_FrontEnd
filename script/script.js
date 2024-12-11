@@ -29,7 +29,12 @@ function cargarCantidades() {
 
 // Cargar las cantidades al iniciar la página solo si hay datos en localStorage
 document.addEventListener("DOMContentLoaded", () => {
-  if (performance.navigation.type === 1) {
+  // Detectar si la página fue refrescada
+  const navigationEntries = performance.getEntriesByType("navigation");
+  const wasReloaded =
+    navigationEntries.length > 0 && navigationEntries[0].type === "reload";
+
+  if (wasReloaded) {
     // La página fue refrescada
     cargarCantidades();
   } else {
@@ -37,3 +42,4 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.clear();
   }
 });
+
