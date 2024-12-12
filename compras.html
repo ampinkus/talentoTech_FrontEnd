@@ -15,6 +15,7 @@
     />
     <title>Compras - 3Mar</title>
   </head>
+
   <body>
     <!-- Menú de navegación estándar de Bootstrap -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -62,7 +63,15 @@
 
     <!-- Contenido principal -->
     <main class="container mt-4">
-      <h1 class="text-center mb-4">Compra de Cartuchos de Cinta LTO</h1>
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="mb-0">Compra de Cartuchos de Cinta LTO</h1>
+        <div class="d-flex">
+          <button class="btn btn-danger me-2" onclick="borrarCantidades()">
+            Borrar Cantidades
+          </button>
+          <a href="/carrito.html" class="btn btn-primary">Carrito</a>
+        </div>
+      </div>
       <div class="row row-cols-1 row-cols-md-2 g-4">
         <!-- Tarjeta 1: LTO-9 -->
         <div class="col">
@@ -141,7 +150,7 @@
             </div>
             <div class="card-body">
               <h5 class="card-title">LTO-7</h5>
-               <div class="quantity-section d-flex align-items-center gap-2">
+              <div class="quantity-section d-flex align-items-center gap-2">
                 <input
                   type="number"
                   id="LTO-7"
@@ -173,7 +182,7 @@
             </div>
             <div class="card-body">
               <h5 class="card-title">LTO-6</h5>
-               <div class="quantity-section d-flex align-items-center gap-2">
+              <div class="quantity-section d-flex align-items-center gap-2">
                 <input
                   type="number"
                   id="LTO-6"
@@ -205,7 +214,7 @@
             </div>
             <div class="card-body">
               <h5 class="card-title">LTO-5</h5>
-               <div class="quantity-section d-flex align-items-center gap-2">
+              <div class="quantity-section d-flex align-items-center gap-2">
                 <input
                   type="number"
                   id="LTO-5"
@@ -237,7 +246,7 @@
             </div>
             <div class="card-body">
               <h5 class="card-title">Cartucho de Limpieza</h5>
-               <div class="quantity-section d-flex align-items-center gap-2">
+              <div class="quantity-section d-flex align-items-center gap-2">
                 <input
                   type="number"
                   id="Cartucho de Limpieza"
