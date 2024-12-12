@@ -1,10 +1,7 @@
-module.exports = [
-  {
+module.exports = {
     files: ["**/*.js"],
     rules: {
-      "no-unused-vars": ["warn", { "args": "none" }]
-      "eqeqeq": "error",
+      "no-unused-vars": ["warn", { args: "none" }],
       "no-console": "warn"
     }
-  }
-];
+};

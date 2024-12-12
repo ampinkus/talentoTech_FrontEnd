@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install linters
+      - name: Install linters globally
         run: |
           npm install -g htmlhint stylelint eslint@8.50.0
 
@@ -32,4 +32,4 @@ jobs:
         run: stylelint "**/*.css"
 
       - name: Run ESLint
-        run: eslint "**/*.js"
+        run: eslint --no-eslintrc --config eslint.config.js "**/*.js"
