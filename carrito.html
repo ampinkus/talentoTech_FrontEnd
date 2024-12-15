@@ -56,12 +56,17 @@
 
   <!-- Contenido principal -->
   <main class="container mt-4">
-    <div class="d-flex justify-content-center align-items-center mb-4">
-      <h1 class="me-2">Artículos Comprados</h1>
-      <i class="bi bi-cart4 fs-1"></i>
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <div class="d-flex align-items-center">
+        <h1 class="me-2 mb-0">Artículos Comprados</h1>
+        <i class="bi bi-cart4 fs-1"></i>
+      </div>
+      <div>
+        <button class="btn btn-success" onclick="realizarCheckOut()">Check Out</button>
+      </div>
     </div>
 
-    <div class="card p-3 d-flex justify-content-center">
+    <div class="card p-3">
       <div class="table-responsive">
         <table class="table table-striped table-bordered table-sm text-center mb-0">
           <thead class="table-dark">
@@ -86,6 +91,24 @@
       </div>
     </div>
   </main>
+
+  <!-- Modal de agradecimiento -->
+  <div class="modal fade" id="modalGracias" tabindex="-1" aria-labelledby="modalGraciasLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalGraciasLabel">¡Gracias por su compra!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ¡Gracias por comprar en 3Mar! Le estamos enviando su compra a la brevedad.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="./script/script.js"></script>

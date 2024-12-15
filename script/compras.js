@@ -1,5 +1,5 @@
-// Arreglo de productos con el stock inicial
-let productos = [
+// Recuperar el arreglo de productos desde localStorage o inicializar con valores por defecto
+let productos = JSON.parse(localStorage.getItem("productos")) || [
   {
     id: "LTO-9",
     nombre: "LTO-9",
@@ -78,6 +78,11 @@ function generarTarjetas() {
     `;
 
     contenedor.appendChild(tarjeta);
+
+    // Deshabilitar el botón "Actualizar" si el stock es 0
+    if (producto.stock === 0) {
+      document.getElementById(`btn-${producto.id}`).disabled = true;
+    }
   });
 }
 
@@ -85,7 +90,6 @@ function generarTarjetas() {
 function actualizarCantidad(id) {
   const input = document.getElementById(`input-${id}`);
   const cantidad = parseInt(input.value, 10);
-
   const producto = productos.find((p) => p.id === id);
 
   if (isNaN(cantidad) || cantidad <= 0) {
@@ -93,11 +97,10 @@ function actualizarCantidad(id) {
     return;
   }
 
-  if (cantidad > producto.stockInicial) {
+  if (cantidad > producto.stock) {
     alert(
-      `La cantidad ingresada supera el stock disponible (${producto.stockInicial}).`
+      `La cantidad ingresada supera el stock disponible (${producto.stock}).`
     );
-    // Restablecer el campo de cantidad a su estado inicial
     input.value = "";
     input.placeholder = "Cantidad";
     localStorage.removeItem(id);
@@ -106,24 +109,14 @@ function actualizarCantidad(id) {
 
   // Guardar la cantidad en localStorage
   localStorage.setItem(id, cantidad);
-
   alert(
     `Se han añadido ${cantidad} unidades de ${producto.nombre} al carrito.`
   );
 }
 
-// Función para borrar todas las cantidades y restaurar el stock original
+// Función para borrar todas las cantidades sin modificar el stock actual
 function borrarCantidades() {
   productos.forEach((producto) => {
-    // Restaurar el stock al valor inicial
-    producto.stock = producto.stockInicial;
-
-    // Actualizar el stock en la página
-    const stockElement = document.getElementById(`stock-${producto.id}`);
-    if (stockElement) {
-      stockElement.textContent = producto.stock;
-    }
-
     // Limpiar el campo de cantidad
     const input = document.getElementById(`input-${producto.id}`);
     if (input) {
@@ -134,6 +127,8 @@ function borrarCantidades() {
     // Eliminar del localStorage
     localStorage.removeItem(producto.id);
   });
+
+  alert("Todas las cantidades han sido borradas del carrito.");
 }
 
 // Cargar las tarjetas cuando el DOM esté listo
