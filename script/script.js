@@ -1,15 +1,52 @@
 // Obtener el arreglo de productos del localStorage o inicializar con valores por defecto
 let productos = JSON.parse(localStorage.getItem("productos")) || [
-  { id: "LTO-9", nombre: "LTO-9", precio: 1000, stock: 10 },
-  { id: "LTO-8", nombre: "LTO-8", precio: 900, stock: 10 },
-  { id: "LTO-7", nombre: "LTO-7", precio: 800, stock: 10 },
-  { id: "LTO-6", nombre: "LTO-6", precio: 700, stock: 10 },
-  { id: "LTO-5", nombre: "LTO-5", precio: 600, stock: 10 },
+  {
+    id: "LTO-9",
+    nombre: "LTO-9",
+    precio: 1000,
+    stock: 10,
+    imagen: "/images/LTO 9.jpg",
+    stockInicial: 10,
+  },
+  {
+    id: "LTO-8",
+    nombre: "LTO-8",
+    precio: 900,
+    stock: 10,
+    imagen: "/images/LTO 8.jpg",
+    stockInicial: 10,
+  },
+  {
+    id: "LTO-7",
+    nombre: "LTO-7",
+    precio: 800,
+    stock: 10,
+    imagen: "/images/LTO 7.jpg",
+    stockInicial: 10,
+  },
+  {
+    id: "LTO-6",
+    nombre: "LTO-6",
+    precio: 700,
+    stock: 10,
+    imagen: "/images/LTO 6.jpg",
+    stockInicial: 10,
+  },
+  {
+    id: "LTO-5",
+    nombre: "LTO-5",
+    precio: 600,
+    stock: 10,
+    imagen: "/images/LTO 5.jpg",
+    stockInicial: 10,
+  },
   {
     id: "Cartucho de Limpieza",
     nombre: "Cartucho de Limpieza",
     precio: 500,
     stock: 10,
+    imagen: "/images/cartucho limpieza.jpg",
+    stockInicial: 10,
   },
 ];
 
