@@ -146,3 +146,42 @@ function borrarCantidades() {
 
 // Cargar las tarjetas cuando el DOM esté listo
 document.addEventListener("DOMContentLoaded", generarTarjetas);
+
+// API Key de Fixer (reemplázala con tu clave)
+const API_KEY = "7d9cd433310bc9d77f97f5e3ff66e2ad"; // Mi API
+
+// URL de la API de Fixer para obtener la tasa de cambio de USD a ARS
+const fixerAPIURL = `https://data.fixer.io/api/latest?access_key=${API_KEY}&symbols=USD,ARS`;
+
+/**
+ * Función para obtener el tipo de cambio de USD a ARS desde la API de Fixer.
+ */
+async function obtenerTipoCambio() {
+  try {
+    const response = await fetch(fixerAPIURL);
+    const data = await response.json();
+
+    if (data.success) {
+      const tasaUSD = data.rates.USD;
+      const tasaARS = data.rates.ARS;
+      const tipoCambio = (tasaARS / tasaUSD).toFixed(2);
+
+      // Mostrar el tipo de cambio en el elemento correspondiente
+      document.getElementById("valor-tipo-cambio").textContent = tipoCambio;
+
+      console.log(`Tipo de cambio actual: 1 USD = ${tipoCambio} ARS`);
+      return tipoCambio;
+    } else {
+      console.error("Error al obtener el tipo de cambio:", data.error);
+      document.getElementById("valor-tipo-cambio").textContent = "Error";
+      return null;
+    }
+  } catch (error) {
+    console.error("Error al conectar con la API de Fixer:", error);
+    document.getElementById("valor-tipo-cambio").textContent = "Error";
+    return null;
+  }
+}
+
+// Llamar a la función para obtener el tipo de cambio al cargar la página
+document.addEventListener("DOMContentLoaded", obtenerTipoCambio);

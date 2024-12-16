@@ -1,4 +1,136 @@
 # talentoTech_FrontEnd
 Repositorio para el curso de Front End de Talento tech
-Proyecto de pÃ¡gina para 3Mar
+Proyecto de página para 3Mar
 
+Objetivo del Proyecto
+=====================
+El objetivo del proyecto 3Mar es presentar la empresa 3Mar, sus servicios y proporcionar una plataforma para gestionar la compra de productos de respaldo de datos. Los usuarios pueden visualizar productos, agregar cantidades al carrito, realizar compras y gestionar el stock de productos. El sistema permite un proceso de compra intuitivo con funciones para actualizar cantidades, eliminar productos del carrito y realizar el Check Out con control de inventario.
+
+Estructura del Proyecto
+=======================
+
+Archivos HTML
+-------------
+
+1. **index.html**
+   - **Descripción**: Página principal del proyecto.
+   - **Componentes**: 
+     * Barra de Navegación con enlaces a otras secciones (Nosotros, Contacto, Clientes, Servicios, Compras, Carrito).
+     * Sección Principal que muestra información general sobre la empresa y los productos de respaldo con imágenes y descripciones.
+     * Opción "Stock Inicial" en la barra de navegación para reiniciar el stock y borrar el localStorage.
+
+2. **compras.html**
+   - **Descripción**: Página donde se muestran las tarjetas de productos disponibles.
+   - **Componentes**: 
+     * Tarjetas de Productos con la siguiente información: 
+       - Imagen del producto.
+       - Nombre y precio del producto.
+       - Stock disponible.
+       - Campo de cantidad para seleccionar unidades a agregar al carrito.
+       - Botón "Actualizar" para añadir la cantidad seleccionada al carrito.
+
+3. **carrito.html**
+   - **Descripción**: Página que muestra los productos agregados al carrito.
+   - **Componentes**: 
+     * Tabla del Carrito con columnas: 
+       - **Artículo**: Nombre del producto.
+       - **Cantidad**: Cantidad seleccionada.
+       - **Costo Unitario**: Precio por unidad.
+       - **Costo Total**: Precio total por cantidad seleccionada.
+       - **Eliminar**: Botón para eliminar el producto del carrito.
+     * **Costo Total General** que muestra la suma de todos los productos en el carrito.
+     * Botón **"Check Out"** para finalizar la compra y actualizar el stock.
+     * Modal de agradecimiento que se muestra al realizar el Check Out.
+
+4. **about.html**
+   - **Descripción**: Página de información sobre la empresa.
+   - **Componentes**:
+     * Sección **"Quienes somos"** que describe la experiencia de 3Mar en el mercado de respaldo y archivado de datos.
+     * Sección **"Donde estamos"** que incluye un mapa de Google Maps con la ubicación de la empresa.
+     * Barra de Navegación para acceder a otras secciones del sitio.
+
+5. **clientes.html**
+   - **Descripción**: Página que muestra algunos de los clientes de 3Mar.
+   - **Componentes**:
+     * Imagen representativa con una lista de clientes.
+     * Barra de Navegación para acceder a otras secciones del sitio.
+
+6. **contacto.html**
+   - **Descripción**: Página con un formulario de contacto.
+   - **Componentes**:
+     * Formulario de Contacto con campos para:
+       - **Nombre**
+       - **Apellido**
+       - **Email**
+       - **Mensaje**
+     * Botones para enviar o limpiar el formulario.
+     * Barra de Navegación para acceder a otras secciones del sitio.
+
+7. **servicios.html**
+   - **Descripción**: Página que detalla los servicios ofrecidos por 3Mar.
+   - **Componentes**:
+     * Tarjetas de Servicios con descripciones de los servicios de soporte técnico y mantenimiento de unidades de cinta magnética.
+     * Barra de Navegación para acceder a otras secciones del sitio.
+
+
+Archivos JavaScript
+-------------------
+
+1. **index.js**
+   - **Descripción**: Script principal para gestionar el carrito y las compras.
+   - **Funciones**: 
+     * **formatearMoneda(numero)**:
+       - **Parámetro**: `numero` (número a formatear).
+       - **Descripción**: Formatea un número a formato de moneda ($XXXXX).
+       - **Retorna**: El número formateado como una cadena de texto.
+
+     * **cargarCarrito()**:
+       - **Descripción**: Carga los productos almacenados en el carrito y los muestra en una tabla. También actualiza el estado del botón Check Out.
+
+     * **realizarCheckOut()**:
+       - **Descripción**: Descuenta del stock las cantidades compradas, guarda el stock actualizado en localStorage y muestra un modal de agradecimiento.
+
+     * **mostrarMensajeGracias()**:
+       - **Descripción**: Muestra el modal de agradecimiento tras realizar el Check Out.
+
+     * **borrarCantidades()**:
+       - **Descripción**: Borra todas las cantidades almacenadas en el carrito.
+
+     * **eliminarArticulo(id)**:
+       - **Parámetro**: `id` (ID del producto a eliminar).
+       - **Descripción**: Elimina un artículo específico del carrito y actualiza la vista.
+
+2. **compras.js**
+   - **Descripción**: Script para gestionar la página de compras y las tarjetas de productos.
+   - **Funciones**: 
+     * **generarTarjetas()**:
+       - **Descripción**: Genera dinámicamente las tarjetas de productos en la página de compras. Deshabilita el botón **Actualizar** si el stock es 0.
+
+     * **actualizarCantidad(id)**:
+       - **Parámetro**: `id` (ID del producto a actualizar).
+       - **Descripción**: Permite agregar una cantidad seleccionada al carrito y la guarda en localStorage.
+
+     * **borrarCantidades()**:
+       - **Descripción**: Borra todas las cantidades seleccionadas sin modificar el stock actual.
+
+
+Funcionamiento General del Proyecto
+-----------------------------------
+
+1. **Página de Compras (compras.html)**:
+   - Los usuarios seleccionan una cantidad de producto y la agregan al carrito usando el botón **Actualizar**.
+   - El stock se actualiza después del Check Out.
+
+2. **Página del Carrito (carrito.html)**:
+   - Muestra los productos agregados al carrito con sus cantidades y costos.
+   - Permite eliminar productos individuales o borrar todas las cantidades.
+   - El botón **Check Out** finaliza la compra y actualiza el stock disponible.
+
+3. **Reinicio de Stock**:
+   - Desde la opción **"Stock Inicial"** en la barra de navegación de `index.html`, los usuarios pueden reiniciar el stock y borrar el localStorage.
+
+Notas
+-----
+* **Persistencia de Datos**: El proyecto utiliza localStorage para mantener el estado del carrito y el stock de los productos.
+* **Modal de Agradecimiento**: Se muestra después de realizar una compra exitosa.
+* **Botón Check Out**: Está desactivado si el carrito está vacío para evitar compras sin productos seleccionados.
