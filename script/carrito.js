@@ -50,12 +50,19 @@ let productos = JSON.parse(localStorage.getItem("productos")) || [
   },
 ];
 
-// Función para formatear números a formato de moneda
+/**
+ * Función para formatear números a formato de moneda.
+ * @param {number} numero - El número que se desea formatear.
+ * @returns {string} - El número formateado como moneda en formato $XXX.XXX,XX.
+ */
 function formatearMoneda(numero) {
   return `$${numero.toLocaleString("es-ES")}`;
 }
 
-// Función para cargar los artículos en el carrito
+/**
+ * Función para cargar los artículos en el carrito.
+ * Recorre los productos en el localStorage y los muestra en una tabla.
+ */
 function cargarCarrito() {
   const carritoBody = document.getElementById("carrito-body");
   const costoTotalElement = document.getElementById("costo-total");
@@ -71,6 +78,7 @@ function cargarCarrito() {
       const costoTotal = cantidad * costoUnitario;
       costoTotalGeneral += costoTotal;
 
+      // Crear una fila para el producto en el carrito
       const row = document.createElement("tr");
 
       row.innerHTML = `
@@ -89,10 +97,14 @@ function cargarCarrito() {
     }
   });
 
+  // Mostrar el costo total general del carrito
   costoTotalElement.textContent = formatearMoneda(costoTotalGeneral);
 }
 
-// Función para realizar el Check Out
+/**
+ * Función para realizar el Check Out.
+ * Descuenta del stock las cantidades compradas y actualiza el localStorage.
+ */
 function realizarCheckOut() {
   productos.forEach((producto) => {
     const cantidad = parseInt(localStorage.getItem(producto.id), 10);
@@ -100,7 +112,7 @@ function realizarCheckOut() {
     if (cantidad && cantidad > 0) {
       // Descontar del stock la cantidad comprada
       producto.stock -= cantidad;
-      if (producto.stock < 0) producto.stock = 0; // Asegurar que el stock no sea negativo
+      if (producto.stock < 0) producto.stock = 0; // Asegura que el stock no sea negativo
 
       // Eliminar el producto del carrito después del Check Out
       localStorage.removeItem(producto.id);
@@ -117,7 +129,9 @@ function realizarCheckOut() {
   cargarCarrito();
 }
 
-// Función para mostrar el modal de agradecimiento
+/**
+ * Función para mostrar el modal de agradecimiento después del Check Out.
+ */
 function mostrarMensajeGracias() {
   const modalGracias = new bootstrap.Modal(
     document.getElementById("modalGracias")
@@ -125,7 +139,10 @@ function mostrarMensajeGracias() {
   modalGracias.show();
 }
 
-// Función para borrar todas las cantidades del carrito
+/**
+ * Función para borrar todas las cantidades del carrito.
+ * Elimina los productos del carrito y actualiza la vista.
+ */
 function borrarCantidades() {
   productos.forEach((producto) => {
     localStorage.removeItem(producto.id);
@@ -134,7 +151,10 @@ function borrarCantidades() {
   cargarCarrito();
 }
 
-// Función para eliminar un artículo del carrito
+/**
+ * Función para eliminar un artículo específico del carrito.
+ * @param {string} id - El ID del producto a eliminar.
+ */
 function eliminarArticulo(id) {
   if (
     confirm(

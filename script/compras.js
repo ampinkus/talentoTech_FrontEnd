@@ -50,14 +50,19 @@ let productos = JSON.parse(localStorage.getItem("productos")) || [
   },
 ];
 
-// Función para generar las tarjetas de productos
+/**
+ * Función para generar las tarjetas de productos y mostrarlas en el contenedor.
+ * Si el stock de un producto es 0, deshabilita el botón "Actualizar".
+ */
 function generarTarjetas() {
   const contenedor = document.querySelector(".row");
   contenedor.innerHTML = ""; // Limpiar el contenedor antes de agregar nuevas tarjetas
 
   productos.forEach((producto) => {
+    // Recuperar cantidad guardada en el localStorage para el producto actual
     const cantidadGuardada = localStorage.getItem(producto.id) || "";
 
+    // Crear la estructura HTML para una tarjeta de producto
     const tarjeta = document.createElement("div");
     tarjeta.className = "col";
     tarjeta.innerHTML = `
@@ -86,17 +91,22 @@ function generarTarjetas() {
   });
 }
 
-// Función para actualizar la cantidad en el carrito sin reducir el stock permanentemente
+/**
+ * Función para actualizar la cantidad de un producto en el carrito.
+ * @param {string} id - El identificador del producto.
+ */
 function actualizarCantidad(id) {
   const input = document.getElementById(`input-${id}`);
   const cantidad = parseInt(input.value, 10);
   const producto = productos.find((p) => p.id === id);
 
+  // Validar que la cantidad sea un número válido y mayor a 0
   if (isNaN(cantidad) || cantidad <= 0) {
     alert("Por favor, ingrese una cantidad válida.");
     return;
   }
 
+  // Verificar si la cantidad ingresada no supera el stock disponible
   if (cantidad > producto.stock) {
     alert(
       `La cantidad ingresada supera el stock disponible (${producto.stock}).`
@@ -114,7 +124,10 @@ function actualizarCantidad(id) {
   );
 }
 
-// Función para borrar todas las cantidades sin modificar el stock actual
+/**
+ * Función para borrar todas las cantidades del carrito sin modificar el stock actual.
+ * Elimina todas las cantidades del localStorage y resetea los campos de entrada.
+ */
 function borrarCantidades() {
   productos.forEach((producto) => {
     // Limpiar el campo de cantidad
@@ -124,7 +137,7 @@ function borrarCantidades() {
       input.placeholder = "Cantidad";
     }
 
-    // Eliminar del localStorage
+    // Eliminar del localStorage la cantidad del producto
     localStorage.removeItem(producto.id);
   });
 
