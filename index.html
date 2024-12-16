@@ -3,68 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
-    />
+    <meta name="description" content="3Mar ofrece instalación, mantenimiento y soporte de sistemas de backup con más de 23 años de experiencia en el mercado. Productos y servicios para respaldos de datos eficientes y seguros." />
+    <meta name="keywords" content="3Mar, backup, sistemas de respaldo, LTO, almacenamiento de datos, IBM Tape Library, mantenimiento, soporte técnico, telecomunicaciones" />
+    <meta name="author" content="3Mar SRL" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
     <link rel="icon" href="/images/icons8-favicon-64.png" type="image/png" />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>3Mar</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
+
+    <title>3Mar - Soluciones de Backup y Respaldo de Datos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
   </head>
+
   <body>
     <!-- Menú de navegación estándar de Bootstrap -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <div class="container-fluid">
         <a class="navbar-brand" href="/index.html">
-          <img src="/images/logo.png" alt="Logo" width="150" />
+          <img src="/images/logo.png" alt="Logo de 3Mar" width="150" />
         </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="/about.html">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="/contacto.html">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link" href="/clientes.html">Clientes</a></li>
+            <li class="nav-item"><a class="nav-link" href="/servicios.html">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="/compras.html">Compras</a></li>
+            <li class="nav-item"><a class="nav-link" href="/carrito.html"><i class="bi bi-cart"></i> Carrito</a></li>
             <li class="nav-item">
-              <a class="nav-link" href="/about.html">Nosotros</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/contacto.html">Contacto</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/clientes.html">Clientes</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/servicios.html">Servicios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/compras.html">Compras</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/carrito.html">
-                <i class="bi bi-cart"></i> Carrito
-              </a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link text-warning"
-                href="#"
-                onclick="resetearStock()"
-              >
+              <a class="nav-link text-warning" href="#" onclick="resetearStock()">
                 <i class="bi bi-arrow-clockwise"></i> Stock Inicial
               </a>
             </li>
@@ -73,123 +44,47 @@
       </div>
     </nav>
 
+    <!-- Contenido principal -->
     <main class="container mt-4">
       <section class="equipos_instalados">
-        <h1 class="mb-4">
-          Instalación, mantenimiento y soporte de sistemas de Back Up para su
-          empresa
-        </h1>
-        <h3>Algunos de los equipos que hemos instalado:</h3>
+        <h1 class="mb-4">Instalación, mantenimiento y soporte de sistemas de Backup para su empresa</h1>
+        <h2>Equipos de Backup Instalados</h2>
         <div class="row">
+          <!-- Tarjetas de productos -->
           <div class="col-md-6 mx-auto">
             <!-- Primera imagen con texto -->
             <div class="card mb-3">
-              <img
-                src="/images/it-engineer-or-consultant-working-with-backup-server-in-racks-shot-EH6D0W.jpg"
-                class="card-img-top"
-                alt="Sistema de Backup"
-              />
+              <img src="/images/it-engineer-or-consultant-working-with-backup-server-in-racks-shot-EH6D0W.jpg" class="card-img-top" alt="Sistema de Backup">
               <div class="card-body">
-                <p class="card-text">
-                  Sistema de Backup instalado en una empresa cliente
-                </p>
+                <p class="card-text">Sistema de Backup instalado en una empresa cliente.</p>
               </div>
             </div>
             <!-- Segunda imagen con texto -->
             <div class="card mb-3">
-              <img
-                src="/images/IBM-Tape-library-image-696x466.jpg"
-                class="card-img-top"
-                alt="IBM tape library"
-              />
+              <img src="/images/IBM-Tape-library-image-696x466.jpg" class="card-img-top" alt="IBM Tape Library">
               <div class="card-body">
-                <p class="card-text">
-                  IBM Tape Library en acción para respaldos de datos a gran
-                  escala
-                </p>
+                <p class="card-text">IBM Tape Library en acción para respaldos de datos a gran escala.</p>
               </div>
             </div>
             <!-- Tercera imagen con texto -->
             <div class="card mb-3">
-              <img
-                src="/images/ibm4500.jpg"
-                class="card-img-top"
-                alt="TS4500"
-              />
+              <img src="/images/ibm4500.jpg" class="card-img-top" alt="TS4500">
               <div class="card-body">
-                <p class="card-text">
-                  Modelo TS4500, una solución confiable para almacenamiento
-                  seguro
-                </p>
-              </div>
-            </div>
-            <!-- Cuarta imagen con texto -->
-            <div class="card mb-3">
-              <img
-                src="/images/i6-base-standalone_1024x1024.png"
-                class="card-img-top"
-                alt="Standalone"
-              />
-              <div class="card-body">
-                <p class="card-text">
-                  Unidad Standalone para backup independiente
-                </p>
-              </div>
-            </div>
-            <!-- Quinta imagen con texto -->
-            <div class="card mb-3">
-              <img src="/images/s-l1600.png" class="card-img-top" alt="l1600" />
-              <div class="card-body">
-                <p class="card-text">
-                  Modelo L1600, altamente eficiente para backups continuos
-                </p>
-              </div>
-            </div>
-            <!-- Sexta imagen con texto -->
-            <div class="card mb-3">
-              <img
-                src="/images/TS4300.png"
-                class="card-img-top"
-                alt="TS 4300"
-              />
-              <div class="card-body">
-                <p class="card-text">
-                  TS4300, un equipo versátil para backups en empresas de todos
-                  los tamaños
-                </p>
-              </div>
-            </div>
-            <!-- Video explicativo -->
-            <div class="card mt-4">
-              <iframe
-                class="card-img-top"
-                width="100%"
-                height="315"
-                src="https://www.youtube.com/embed/2_Ob0IhKeF8"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-              <div class="card-body">
-                <p class="card-text">
-                  Video explicativo sobre el uso y configuración de nuestras
-                  soluciones de control de sistemas de telecomunicaciones.
-                </p>
+                <p class="card-text">Modelo TS4500, una solución confiable para almacenamiento seguro.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
+
       <!-- Mostrar el tipo de cambio al final de la página -->
       <p class="mt-4 text-center" id="tipo-cambio-texto">
-        Todos los precios en dólares al cambio del día Banco Nación. Al día de
-        hoy 1 U$D = AR$ <span id="valor-tipo-cambio">Cargando...</span>
+        Todos los precios en dólares al cambio del día Banco Nación. Al día de hoy 1 U$D = AR$ <span id="valor-tipo-cambio">Cargando...</span>
       </p>
     </main>
 
     <footer class="text-center py-3 bg-secondary mt-4">
-      Todos los derechos reservados por 3Mar
+      <p>&copy; 2024 3Mar SRL. Todos los derechos reservados.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
