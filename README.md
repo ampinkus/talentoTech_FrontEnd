@@ -1,16 +1,13 @@
 # talentoTech_FrontEnd
-
 Repositorio para el curso de Front End de Talento tech  
 Proyecto de página para 3Mar, empresa que se dedica servicioos y comercialización de sistemas de back up
 
 ## Objetivo del Proyecto
-
 El objetivo del proyecto 3Mar es presentar la empresa 3Mar, sus servicios y proporcionar una plataforma para gestionar la compra de productos de respaldo de datos. Los usuarios pueden visualizar productos, agregar cantidades al carrito, realizar compras y gestionar el stock de productos. El sistema permite un proceso de compra intuitivo con funciones para actualizar cantidades, eliminar productos del carrito y realizar el Check Out con control de inventario.
 
 ## Estructura del Proyecto
 
 ### Archivos HTML
-
 1. **index.html**
    - **Descripción**: Página principal del proyecto.
    - **Componentes**: 
@@ -76,7 +73,6 @@ El objetivo del proyecto 3Mar es presentar la empresa 3Mar, sus servicios y prop
 ---
 
 ### Archivos JavaScript
-
 1. **index.js**
    - **Descripción**: Script para resetear el `localStorage` y restablecer el stock inicial de productos.
    - **Funciones**: 
@@ -137,7 +133,6 @@ El objetivo del proyecto 3Mar es presentar la empresa 3Mar, sus servicios y prop
 ---
 
 ## Funcionamiento General del Proyecto
-
 1. **Página de Compras (`compras.html`)**:
    - Los usuarios seleccionan una cantidad de producto y la agregan al carrito usando el botón **Actualizar**.
    - El stock se actualiza después del Check Out.
@@ -154,8 +149,12 @@ El objetivo del proyecto 3Mar es presentar la empresa 3Mar, sus servicios y prop
 ---
 
 ## Notas
-
 - **Persistencia de Datos**: El proyecto utiliza `localStorage` para mantener el estado del carrito y el stock de los productos.
 - **Modal de Agradecimiento**: Se muestra después de realizar una compra exitosa.
 - **Botón Check Out**: Está desactivado si el carrito está vacío para evitar compras sin productos seleccionados.
 - **API de Fixer**: Se utiliza para obtener el tipo de cambio actual de USD a ARS.
+
+## Instalación
+- Actualmente se encuentra el proyecto en Github: https://github.com/ampinkus/talentoTech_FrontEnd
+- La demo se puede ver en Netifly: https://alfredo-3mar.netlify.app/
+- Se puede instalar de forma local con un servidor Apache o similar
