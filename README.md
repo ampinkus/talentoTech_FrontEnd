@@ -1,23 +1,22 @@
 # talentoTech_FrontEnd
-Repositorio para el curso de Front End de Talento tech
-Proyecto de página para 3Mar
 
-Objetivo del Proyecto
-=====================
+Repositorio para el curso de Front End de Talento tech  
+Proyecto de página para 3Mar, empresa que se dedica servicioos y comercialización de sistemas de back up
+
+## Objetivo del Proyecto
+
 El objetivo del proyecto 3Mar es presentar la empresa 3Mar, sus servicios y proporcionar una plataforma para gestionar la compra de productos de respaldo de datos. Los usuarios pueden visualizar productos, agregar cantidades al carrito, realizar compras y gestionar el stock de productos. El sistema permite un proceso de compra intuitivo con funciones para actualizar cantidades, eliminar productos del carrito y realizar el Check Out con control de inventario.
 
-Estructura del Proyecto
-=======================
+## Estructura del Proyecto
 
-Archivos HTML
--------------
+### Archivos HTML
 
 1. **index.html**
    - **Descripción**: Página principal del proyecto.
    - **Componentes**: 
      * Barra de Navegación con enlaces a otras secciones (Nosotros, Contacto, Clientes, Servicios, Compras, Carrito).
      * Sección Principal que muestra información general sobre la empresa y los productos de respaldo con imágenes y descripciones.
-     * Opción "Stock Inicial" en la barra de navegación para reiniciar el stock y borrar el localStorage.
+     * Opción **"Stock Inicial"** en la barra de navegación para reiniciar el stock y borrar el localStorage.
 
 2. **compras.html**
    - **Descripción**: Página donde se muestran las tarjetas de productos disponibles.
@@ -27,7 +26,9 @@ Archivos HTML
        - Nombre y precio del producto.
        - Stock disponible.
        - Campo de cantidad para seleccionar unidades a agregar al carrito.
-       - Botón "Actualizar" para añadir la cantidad seleccionada al carrito.
+       - Botón **"Actualizar"** para añadir la cantidad seleccionada al carrito.
+     * Mensaje informativo que muestra el tipo de cambio de dólares a pesos argentinos:
+       - **Texto**: "Todos los precios en dólares al cambio del día Banco Nación. Al día de hoy 1 U$D = AR$ [valor del cambio]."
 
 3. **carrito.html**
    - **Descripción**: Página que muestra los productos agregados al carrito.
@@ -72,11 +73,25 @@ Archivos HTML
      * Tarjetas de Servicios con descripciones de los servicios de soporte técnico y mantenimiento de unidades de cinta magnética.
      * Barra de Navegación para acceder a otras secciones del sitio.
 
+---
 
-Archivos JavaScript
--------------------
+### Archivos JavaScript
 
 1. **index.js**
+   - **Descripción**: Script para resetear el `localStorage` y restablecer el stock inicial de productos.
+   - **Funciones**: 
+     * **resetearStock()**:
+       - **Descripción**: 
+         - Restablece el stock de todos los productos a su valor inicial de 10 unidades.
+         - Guarda el arreglo inicial de productos en `localStorage`.
+         - Limpia el `localStorage` y recarga la página.
+       - **Acciones**: 
+         - Guarda el arreglo inicial de productos en `localStorage`.
+         - Borra todo el `localStorage`.
+         - Muestra una alerta indicando que el stock se ha restablecido.
+         - Recarga la página.
+
+2. **carrito.js**
    - **Descripción**: Script principal para gestionar el carrito y las compras.
    - **Funciones**: 
      * **formatearMoneda(numero)**:
@@ -88,7 +103,7 @@ Archivos JavaScript
        - **Descripción**: Carga los productos almacenados en el carrito y los muestra en una tabla. También actualiza el estado del botón Check Out.
 
      * **realizarCheckOut()**:
-       - **Descripción**: Descuenta del stock las cantidades compradas, guarda el stock actualizado en localStorage y muestra un modal de agradecimiento.
+       - **Descripción**: Descuenta del stock las cantidades compradas, guarda el stock actualizado en `localStorage` y muestra un modal de agradecimiento.
 
      * **mostrarMensajeGracias()**:
        - **Descripción**: Muestra el modal de agradecimiento tras realizar el Check Out.
@@ -100,7 +115,7 @@ Archivos JavaScript
        - **Parámetro**: `id` (ID del producto a eliminar).
        - **Descripción**: Elimina un artículo específico del carrito y actualiza la vista.
 
-2. **compras.js**
+3. **compras.js**
    - **Descripción**: Script para gestionar la página de compras y las tarjetas de productos.
    - **Funciones**: 
      * **generarTarjetas()**:
@@ -108,29 +123,39 @@ Archivos JavaScript
 
      * **actualizarCantidad(id)**:
        - **Parámetro**: `id` (ID del producto a actualizar).
-       - **Descripción**: Permite agregar una cantidad seleccionada al carrito y la guarda en localStorage.
+       - **Descripción**: Permite agregar una cantidad seleccionada al carrito y la guarda en `localStorage`.
 
      * **borrarCantidades()**:
        - **Descripción**: Borra todas las cantidades seleccionadas sin modificar el stock actual.
 
+     * **obtenerTipoCambio()**:
+       - **Descripción**: Obtiene el tipo de cambio de USD a ARS desde la API de Fixer.
 
-Funcionamiento General del Proyecto
------------------------------------
+     * **mostrarPreciosEnPesos()**:
+       - **Descripción**: Muestra los precios de los productos convertidos a pesos argentinos (ARS) utilizando el tipo de cambio obtenido.
 
-1. **Página de Compras (compras.html)**:
+---
+
+## Funcionamiento General del Proyecto
+
+1. **Página de Compras (`compras.html`)**:
    - Los usuarios seleccionan una cantidad de producto y la agregan al carrito usando el botón **Actualizar**.
    - El stock se actualiza después del Check Out.
+   - Se muestra el tipo de cambio actual de dólares a pesos argentinos al final de la página, obtenido de la API de Fixer.
 
-2. **Página del Carrito (carrito.html)**:
+2. **Página del Carrito (`carrito.html`)**:
    - Muestra los productos agregados al carrito con sus cantidades y costos.
    - Permite eliminar productos individuales o borrar todas las cantidades.
    - El botón **Check Out** finaliza la compra y actualiza el stock disponible.
 
 3. **Reinicio de Stock**:
-   - Desde la opción **"Stock Inicial"** en la barra de navegación de `index.html`, los usuarios pueden reiniciar el stock y borrar el localStorage.
+   - Desde la opción **"Stock Inicial"** en la barra de navegación de `index.html`, los usuarios pueden reiniciar el stock y borrar el `localStorage`.
 
-Notas
------
-* **Persistencia de Datos**: El proyecto utiliza localStorage para mantener el estado del carrito y el stock de los productos.
-* **Modal de Agradecimiento**: Se muestra después de realizar una compra exitosa.
-* **Botón Check Out**: Está desactivado si el carrito está vacío para evitar compras sin productos seleccionados.
+---
+
+## Notas
+
+- **Persistencia de Datos**: El proyecto utiliza `localStorage` para mantener el estado del carrito y el stock de los productos.
+- **Modal de Agradecimiento**: Se muestra después de realizar una compra exitosa.
+- **Botón Check Out**: Está desactivado si el carrito está vacío para evitar compras sin productos seleccionados.
+- **API de Fixer**: Se utiliza para obtener el tipo de cambio actual de USD a ARS.
