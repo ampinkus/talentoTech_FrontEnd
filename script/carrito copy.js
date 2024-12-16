@@ -62,22 +62,18 @@ function formatearMoneda(numero) {
 /**
  * Función para cargar los artículos en el carrito.
  * Recorre los productos en el localStorage y los muestra en una tabla.
- * También actualiza el estado del botón Check Out.
  */
 function cargarCarrito() {
   const carritoBody = document.getElementById("carrito-body");
   const costoTotalElement = document.getElementById("costo-total");
-  const checkOutButton = document.getElementById("check-out-button");
   carritoBody.innerHTML = "";
 
   let costoTotalGeneral = 0;
-  let carritoVacio = true;
 
   productos.forEach((producto) => {
     const cantidad = parseInt(localStorage.getItem(producto.id), 10);
 
     if (cantidad && cantidad > 0) {
-      carritoVacio = false;
       const costoUnitario = producto.precio;
       const costoTotal = cantidad * costoUnitario;
       costoTotalGeneral += costoTotal;
@@ -103,9 +99,6 @@ function cargarCarrito() {
 
   // Mostrar el costo total general del carrito
   costoTotalElement.textContent = formatearMoneda(costoTotalGeneral);
-
-  // Desactivar el botón Check Out si el carrito está vacío
-  checkOutButton.disabled = carritoVacio;
 }
 
 /**
